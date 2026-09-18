@@ -13,16 +13,17 @@ const SpecialtyPills = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-1 mb-2">
-      <span className="text-xs font-Geist uppercase tracking-wider text-primary">
+    <div className="mb-1 flex flex-col gap-1">
+      <span className="font-Geist text-[10px] font-medium uppercase tracking-wider text-primary">
         Tipo de Consulta / Servicio de Interés *
       </span>
-      <div className="flex flex-wrap gap-1 mt-1">
+      <div className="mt-1 flex flex-wrap gap-1">
         {pills.map((pill, index) => (
           <button
             key={index}
             onClick={() => setSelectedPill(index)}
-            className={`specialty-pill px-2 py-0.5 rounded font-Geist text-xs uppercase transition-all ${
+            type="button"
+            className={`specialty-pill h-7 rounded px-3 font-Geist text-[10px] font-medium uppercase tracking-wider transition-all ${
               selectedPill === index
                 ? 'bg-primary-container text-on-primary-container hover:bg-primary'
                 : 'bg-surface-container-lowest text-on-surface-variant hover:text-primary'

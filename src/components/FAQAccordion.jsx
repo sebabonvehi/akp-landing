@@ -21,9 +21,9 @@ const FAQAccordion = () => {
   return (
     <div className="space-y-2">
       {faqs.map((faq, index) => (
-        <div key={index} className="bg-surface-container rounded-lg p-3">
+        <div key={index} className="bg-surface-container rounded-lg px-5 py-4">
           <details className="group cursor-pointer">
-            <summary className="flex items-center justify-between text-sm font-EB_Garamond text-on-surface list-none">
+            <summary className="flex items-center justify-between gap-4 text-xl font-EB_Garamond text-on-surface list-none">
               <span>{faq.question}</span>
               <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
             </summary>

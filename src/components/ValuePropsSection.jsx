@@ -2,7 +2,7 @@ import ValuePropsCard from './ValuePropsCard';
 
 const ValuePropsSection = () => {
   return (
-    <section className="w-full bg-surface px-6 pt-16">
+    <section className="w-full bg-surface px-4 md:px-6 py-16">
       <div className="max-w-7xl mx-auto flex flex-col gap-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-3">
           <div>
@@ -18,7 +18,7 @@ const ValuePropsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Asesoría Protrusiva */}
           <ValuePropsCard
             icon="architecture"

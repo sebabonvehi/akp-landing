@@ -71,7 +71,7 @@ const Form = () => {
       onSubmit={handleSubmit}
     >
       {/* Row 1: Specialist & Clinic */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="flex flex-col gap-0.5">
           <Input
             label="Dr. / Nombre del Odontólogo"
@@ -97,7 +97,7 @@ const Form = () => {
       </div>
 
       {/* Row 2: Communication Channels */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="flex flex-col gap-0.5">
           <Input
             label="Email Clínico de Contacto"
@@ -152,21 +152,21 @@ const Form = () => {
       </div>
 
       {/* Checkbox Lead Magnet */}
-      <label className="flex items-start gap-1 cursor-pointer select-none mt-1 group">
+      <label className="flex cursor-pointer select-none items-start gap-2 group">
         <input
           checked={formState.sendGuide}
           onChange={handleChange}
           name="sendGuide"
-          className="mt-1 h-3 w-3 rounded bg-surface-container-lowest cursor-pointer accent-primary"
+          className="mt-1 h-4 w-4 cursor-pointer rounded bg-surface-container-lowest accent-primary"
           type="checkbox"
         />
-        <span className="text-sm font-Hanken_Grotesk text-on-surface-variant group-hover:text-on-surface transition-colors">
+        <span className="font-Hanken_Grotesk text-[13px] text-on-surface-variant transition-colors group-hover:text-on-surface">
           Deseo recibir además la <strong className="font-medium text-primary">Guía de Preparación Clínica & Tabla de Precios 2025</strong> en PDF a mi dirección de correo.
         </span>
       </label>
 
       {/* Submit Button & Feedback Area */}
-      <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="flex flex-col items-center justify-between gap-4 pt-1 sm:flex-row">
         <Button
           variant="primary"
           type="submit"

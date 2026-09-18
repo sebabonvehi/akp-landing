@@ -17,7 +17,7 @@ const ConversionStrip = () => {
         </div>
         <a
           href="mailto:consultas@akpdentallab.com?subject=Consulta%20Urgente%20Caso%20Clinico"
-          className="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-on-primary font-Geist text-xs uppercase px-5 py-2 rounded transition-all hover:shadow-[0_0_24px_rgba(242,202,80,0.35)]"
+          className="inline-flex h-10 items-center gap-2 rounded bg-primary px-7 font-Geist text-[11px] font-semibold uppercase leading-none tracking-wider text-on-primary-container transition-all hover:bg-primary-container [&_.material-symbols-outlined]:text-[18px]"
         >
           <span className="material-symbols-outlined text-[18px]">outgoing_mail</span>
           Redactar Correo Ahora

@@ -3,17 +3,17 @@ const Textarea = ({ placeholder, label, className = '', rows = 4, ...props }) =>
     <div className="flex flex-col gap-0.5">
       {label && (
         <div className="flex items-center justify-between">
-          <label htmlFor={placeholder?.toLowerCase().replace(/\s+/g, '')} className="text-xs font-Geist uppercase tracking-wider text-primary">
+          <label htmlFor={placeholder?.toLowerCase().replace(/\s+/g, '')} className="font-Geist text-[10px] font-medium uppercase tracking-wider text-primary">
             {label}
           </label>
-          <span className="text-xs font-Geist uppercase text-outline">
+          <span className="hidden sm:inline font-Geist text-[10px] uppercase tracking-wider text-outline">
             Detalle sustratos, espesores o fechas límite
           </span>
         </div>
       )}
       <textarea
         placeholder={placeholder}
-        className={`w-full bg-surface-container-lowest text-on-surface font-Hanken_Grotesk text-body-md p-2.5 rounded focus:outline-none focus:bg-surface-container-high transition-colors resize-y ${className}`}
+        className={`w-full min-h-32 resize-y rounded bg-surface-container-lowest p-3 font-Hanken_Grotesk text-[14px] text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-primary ${className}`}
         rows={rows}
         {...props}
       />
