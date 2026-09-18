@@ -1,0 +1,150 @@
+/* Custom CSS properties for design system */
+:root {
+  /* Surface colors */
+  --surface: #121316;
+  --surface-dim: #121316;
+  --surface-bright: #38393c;
+  --surface-container-lowest: #0d0e11;
+  --surface-container-low: #1b1b1f;
+  --surface-container: #1f1f23;
+  --surface-container-high: #292a2d;
+  --surface-container-highest: #343538;
+
+  /* Text colors */
+  --on-surface: #e3e2e6;
+  --on-surface-variant: #d0c5af;
+  --inverse-surface: #e3e2e6;
+  --inverse-on-surface: #2f3034;
+
+  /* Outline colors */
+  --outline: #99907c;
+  --outline-variant: #4d4635;
+
+  /* Accent colors */
+  --surface-tint: #e9c349;
+  --primary: #f2ca50;
+  --on-primary: #3c2f00;
+  --primary-container: #d4af37;
+  --on-primary-container: #554300;
+  --inverse-primary: #735c00;
+
+  --secondary: #d4c78f;
+  --on-secondary: #383006;
+  --secondary-container: #4f471b;
+  --on-secondary-container: #c2b57f;
+
+  --tertiary: #f3c87a;
+  --on-tertiary: #412d00;
+  --tertiary-container: #d5ad62;
+  --on-tertiary-container: #5b4000;
+
+  /* Error colors */
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  /* Fixed colors */
+  --primary-fixed: #ffe088;
+  --primary-fixed-dim: #e9c349;
+  --on-primary-fixed: #241a00;
+  --on-primary-fixed-variant: #574500;
+  --secondary-fixed: #f1e3a9;
+  --secondary-fixed-dim: #d4c78f;
+  --on-secondary-fixed: #211b00;
+  --on-secondary-fixed-variant: #4f471b;
+  --tertiary-fixed: #ffdea5;
+  --tertiary-fixed-dim: #eac173;
+  --on-tertiary-fixed: #271900;
+  --on-tertiary-fixed-variant: #5d4200;
+
+  /* Background colors */
+  --background: #121316;
+  --on-background: #e3e2e6;
+  --surface-variant: #343538;
+
+  /* Border radius */
+  --radius-sm: 0.125rem;
+  --radius: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 0.75rem;
+  --spacing-margin: 3rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+
+  /* Font families */
+  --font-display-lg-mobile: 'EB Garamond';
+  --font-label-sm: 'Geist';
+  --font-headline-sm: 'EB Garamond';
+  --font-display-lg: 'EB Garamond';
+  --font-label-md: 'Geist';
+  --font-body-sm: 'Hanken Grotesk';
+  --font-body-md: 'Hanken Grotesk';
+  --font-headline-md: 'EB Garamond';
+  --font-headline-lg-mobile: 'EB Garamond';
+  --font-label-lg: 'Geist';
+  --font-body-lg: 'Hanken Grotesk';
+  --font-headline-lg: 'EB Garamond';
+
+  /* Font sizes */
+  --text-display-lg-mobile: 36px;
+  --text-label-sm: 10px;
+  --text-headline-sm: 22px;
+  --text-display-lg: 56px;
+  --text-label-md: 11px;
+  --text-body-sm: 13px;
+  --text-body-md: 15px;
+  --text-headline-md: 28px;
+  --text-headline-lg-mobile: 28px;
+  --text-label-lg: 13px;
+  --text-body-lg: 18px;
+  --text-headline-lg: 40px;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body-md);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--on-surface);
+  overscroll-behavior: none;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
