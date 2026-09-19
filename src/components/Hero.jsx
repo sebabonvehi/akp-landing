@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <section className="relative w-full bg-surface px-4 md:px-6 py-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_400px] items-center gap-8">
+    <section className="relative w-full bg-surface px-4 md:px-8 py-12 md:py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_400px] items-center gap-10 md:gap-12">
         {/* Left Editorial Pitch */}
         <div className="flex flex-col items-start max-w-3xl">
           <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container-high rounded-full mb-3 text-xs font-Geist uppercase tracking-widest text-primary">
@@ -55,9 +55,9 @@ const Hero = () => {
         </div>
 
         {/* Right Visual Feature: Editorial Craftsmanship Accent */}
-        <div className="w-full flex flex-col gap-3">
+        <div className="w-full flex flex-col gap-4 md:gap-6">
           <div className="relative bg-surface-container-low p-2 rounded-xl overflow-hidden shadow-xl">
-            <div className="relative h-64 w-full rounded overflow-hidden">
+            <div className="relative h-72 md:h-80 w-full rounded overflow-hidden">
               <img
                 className="w-full h-full object-cover brightness-95 hover:scale-105 transition-transform duration-500"
                 data-alt="Close-up macro photography of a master dental ceramist hand wearing a surgical latex glove, holding a fine-tipped Kolinsky brush delicately characterizing a layered zirconia dental crown on a black granite workbench with warm directional studio lighting, dark luxury laboratory aesthetic."

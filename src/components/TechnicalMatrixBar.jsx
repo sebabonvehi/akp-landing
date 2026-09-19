@@ -1,6 +1,6 @@
 const TechnicalMatrixBar = () => {
   return (
-    <section className="w-full mt-16 bg-surface-container-lowest border-y border-outline-variant/30 px-4 md:px-6 py-1 text-on-surface-variant text-[10px] font-Geist uppercase tracking-widest">
+    <section className="w-full mt-12 md:mt-16 bg-surface-container-lowest border-y border-outline-variant/30 px-4 md:px-6 py-2 md:py-3 text-on-surface-variant text-[10px] md:text-[11px] font-Geist uppercase tracking-widest">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-1.5">
           <span className="inline-flex items-center gap-1.5 text-primary">

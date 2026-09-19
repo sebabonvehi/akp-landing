@@ -66,7 +66,7 @@ const Form = () => {
 
   return (
     <form
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-6 md:gap-8"
       id="clinicalInquiryForm"
       onSubmit={handleSubmit}
     >
