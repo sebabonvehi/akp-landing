@@ -1,20 +1,39 @@
-const Textarea = ({ placeholder, label, className = '', rows = 4, ...props }) => {
+const Textarea = ({
+  label,
+  hint,
+  required,
+  className = '',
+  rows = 4,
+  id,
+  name,
+  ...props
+}) => {
+  const textareaId = id ?? name;
+
   return (
-    <div className="flex flex-col gap-0.5">
+    <div className="flex flex-col gap-1">
       {label && (
-        <div className="flex items-center justify-between">
-          <label htmlFor={placeholder?.toLowerCase().replace(/\s+/g, '')} className="font-Geist text-[10px] font-medium uppercase tracking-wider text-primary">
+        <div className="flex items-center justify-between gap-2">
+          <label
+            htmlFor={textareaId}
+            className="font-Geist text-label-sm font-medium uppercase tracking-wider text-primary"
+          >
             {label}
+            {required && ' *'}
           </label>
-          <span className="hidden sm:inline font-Geist text-[10px] uppercase tracking-wider text-outline">
-            Detalle sustratos, espesores o fechas límite
-          </span>
+          {hint && (
+            <span className="hidden font-Geist text-label-sm text-outline sm:inline">
+              {hint}
+            </span>
+          )}
         </div>
       )}
       <textarea
-        placeholder={placeholder}
-        className={`w-full min-h-32 resize-y rounded bg-surface-container-lowest p-3 font-Hanken_Grotesk text-[14px] text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-primary ${className}`}
+        id={textareaId}
+        name={name}
+        required={required}
         rows={rows}
+        className={`w-full resize-y rounded-sm bg-surface-container-lowest p-3 font-Hanken_Grotesk text-body-md text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-on-surface-variant/80 focus:outline-primary ${className}`}
         {...props}
       />
     </div>

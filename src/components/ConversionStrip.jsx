@@ -1,27 +1,29 @@
+import Button from './Button';
+
 const ConversionStrip = () => {
   return (
-    <section className="w-full bg-surface-container-high px-6 md:px-8 pt-6 md:pt-8 text-on-surface">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div className="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center text-on-primary">
-            <span className="material-symbols-outlined">headset_mic</span>
+    <section className="w-full bg-surface-container-high px-margin-mobile py-3.5 text-on-surface md:px-margin">
+      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+        <div className="flex items-center gap-4">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-on-primary">
+            <span className="material-symbols-outlined text-[22px]">headset_mic</span>
           </div>
           <div>
-            <span className="text-xs font-Geist uppercase tracking-wider text-primary block">
+            <span className="block font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary">
               ¿Tiene un caso quirúrgico o estético en marcha hoy?
             </span>
-            <span className="text-sm font-Hanken_Grotesk text-on-surface-variant">
+            <span className="font-Hanken_Grotesk text-sm text-on-surface-variant">
               Escríbanos a consultas@akpdentallab.com para coordinar tiempos con el ceramista asignado.
             </span>
           </div>
         </div>
-        <a
+        <Button
           href="mailto:consultas@akpdentallab.com?subject=Consulta%20Urgente%20Caso%20Clinico"
-          className="inline-flex h-10 items-center gap-2 rounded bg-primary px-7 font-Geist text-[11px] font-semibold uppercase leading-none tracking-wider text-on-primary-container transition-all hover:bg-primary-container [&_.material-symbols-outlined]:text-[18px]"
+          className="shrink-0"
         >
-          <span className="material-symbols-outlined text-[18px]">outgoing_mail</span>
+          <span className="material-symbols-outlined">outgoing_mail</span>
           Redactar Correo Ahora
-        </a>
+        </Button>
       </div>
     </section>
   );

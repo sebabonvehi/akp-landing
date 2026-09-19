@@ -1,18 +1,18 @@
-const ValuePropsCard = ({ icon, title, description, badgeText }) => {
+const ValuePropsCard = ({ icon, title, description, badgeText, linkText }) => {
   return (
-    <div className="bg-surface-container-low hover:bg-surface-container p-6 rounded-lg shadow-sm transition-all flex flex-col justify-between min-h-72">
-      <div className="flex flex-col gap-3 mb-4">
-        <div className="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary">
+    <div className="flex h-full flex-col justify-between rounded-lg bg-surface-container-low p-6 transition-colors hover:bg-surface-container">
+      <div className="flex flex-col gap-2">
+        <div className="mb-1 flex h-10 w-10 items-center justify-center rounded-sm bg-surface-container-high text-primary">
           <span className="material-symbols-outlined text-[24px]">{icon}</span>
         </div>
-        <span className="text-xs font-Geist uppercase text-outline">{badgeText}</span>
-        <h3 className="text-xl font-EB_Garamond text-on-surface leading-tight">{title}</h3>
-        <p className="text-sm font-Hanken_Grotesk text-on-surface-variant">
-          {description}
-        </p>
+        <span className="font-Geist text-label-sm font-semibold uppercase tracking-wider text-outline">
+          {badgeText}
+        </span>
+        <h3 className="font-EB_Garamond text-headline-sm text-on-surface">{title}</h3>
+        <p className="font-Hanken_Grotesk text-sm text-on-surface-variant">{description}</p>
       </div>
-      <div className="pt-1 flex items-center gap-1 text-xs font-Geist uppercase text-secondary">
-        <span>{badgeText}</span>
+      <div className="mt-6 flex items-center gap-1 font-Geist text-label-sm font-semibold uppercase tracking-wider text-secondary">
+        <span>{linkText}</span>
         <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
       </div>
     </div>

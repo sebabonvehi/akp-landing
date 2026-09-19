@@ -1,37 +1,51 @@
 const Input = ({
   type = 'text',
-  placeholder,
   label,
+  hint,
   required,
   className = '',
   iconLeft,
-  iconLeftClass = '',
   iconRight,
-  iconRightClass = '',
+  id,
+  name,
   ...props
 }) => {
+  const inputId = id ?? name;
+
   return (
-    <div className="flex flex-col gap-0.5">
+    <div className="flex flex-col gap-1">
       {label && (
-        <label htmlFor={placeholder?.toLowerCase().replace(/\s+/g, '')} className="flex items-center justify-between font-Geist text-label-sm md:text-label-md font-medium uppercase tracking-wider text-primary">
-          <span>{label}</span>
-          {required && <span className="text-outline text-[9px]">Requerido</span>}
-        </label>
+        <div className="flex items-center justify-between gap-2">
+          <label
+            htmlFor={inputId}
+            className="font-Geist text-label-sm font-medium uppercase tracking-wider text-primary"
+          >
+            {label}
+            {required && ' *'}
+          </label>
+          {hint && (
+            <span className="shrink-0 font-Geist text-[9px] uppercase tracking-wider text-outline">
+              {hint}
+            </span>
+          )}
+        </div>
       )}
       <div className="relative flex items-center">
         {iconLeft && (
-          <span className={`material-symbols-outlined absolute left-3.5 text-primary text-[15px] md:text-[17px] ${iconLeftClass}`}>
+          <span className="material-symbols-outlined pointer-events-none absolute left-3 text-[18px] text-primary">
             {iconLeft}
           </span>
         )}
         <input
+          id={inputId}
+          name={name}
           type={type}
-          placeholder={placeholder}
-          className={`h-10 w-full rounded bg-surface-container-lowest pl-11 pr-3 font-Hanken_Grotesk text-body-sm md:text-body-md text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-primary ${className}`}
+          required={required}
+          className={`h-10 w-full rounded-sm bg-surface-container-lowest ${iconLeft ? 'pl-10' : 'pl-3'} ${iconRight ? 'pr-10' : 'pr-3'} font-Hanken_Grotesk text-body-md text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-on-surface-variant/80 focus:outline-primary ${className}`}
           {...props}
         />
         {iconRight && (
-          <span className={`material-symbols-outlined absolute right-3 text-outline text-[15px] md:text-[17px] ${iconRightClass}`}>
+          <span className="material-symbols-outlined pointer-events-none absolute right-3 text-[18px] text-outline">
             {iconRight}
           </span>
         )}
@@ -41,4 +55,3 @@ const Input = ({
 };
 
 export default Input;
-
