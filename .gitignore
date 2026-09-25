@@ -24,4 +24,7 @@ dist-ssr
 *.sw?
 
 .mcp.json
-.oxlintrc.json
+
+# Local tooling
+.claude/settings.local.json
+.codegraph/

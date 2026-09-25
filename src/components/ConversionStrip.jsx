@@ -9,11 +9,12 @@ const ConversionStrip = () => {
             <span className="material-symbols-outlined text-[22px]">headset_mic</span>
           </div>
           <div>
-            <span className="block font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary">
+            <span className="block font-Geist text-label-sm font-semibold tracking-wider text-primary uppercase">
               ¿Tiene un caso quirúrgico o estético en marcha hoy?
             </span>
             <span className="font-Hanken_Grotesk text-sm text-on-surface-variant">
-              Escríbanos a consultas@akpdentallab.com para coordinar tiempos con el ceramista asignado.
+              Escríbanos a consultas@akpdentallab.com para coordinar tiempos con el ceramista
+              asignado.
             </span>
           </div>
         </div>

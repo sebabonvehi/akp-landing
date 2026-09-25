@@ -1,13 +1,4 @@
-const Textarea = ({
-  label,
-  hint,
-  required,
-  className = '',
-  rows = 4,
-  id,
-  name,
-  ...props
-}) => {
+const Textarea = ({ label, hint, required, className = '', rows = 4, id, name, ...props }) => {
   const textareaId = id ?? name;
 
   return (
@@ -16,15 +7,13 @@ const Textarea = ({
         <div className="flex items-center justify-between gap-2">
           <label
             htmlFor={textareaId}
-            className="font-Geist text-label-sm font-medium uppercase tracking-wider text-primary"
+            className="font-Geist text-label-sm font-medium tracking-wider text-primary uppercase"
           >
             {label}
             {required && ' *'}
           </label>
           {hint && (
-            <span className="hidden font-Geist text-label-sm text-outline sm:inline">
-              {hint}
-            </span>
+            <span className="hidden font-Geist text-label-sm text-outline sm:inline">{hint}</span>
           )}
         </div>
       )}

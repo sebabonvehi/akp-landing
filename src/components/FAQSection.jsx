@@ -5,7 +5,7 @@ const FAQSection = () => {
     <section className="w-full bg-surface-container-lowest px-margin-mobile py-10 md:px-margin">
       <div className="mx-auto flex max-w-4xl flex-col gap-6">
         <div className="text-center">
-          <span className="mb-1 block font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary">
+          <span className="mb-1 block font-Geist text-label-sm font-semibold tracking-wider text-primary uppercase">
             Dudas Frecuentes
           </span>
           <h2 className="font-EB_Garamond text-headline-sm text-on-surface md:text-headline-md">

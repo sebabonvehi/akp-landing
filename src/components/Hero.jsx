@@ -16,19 +16,21 @@ const Hero = () => {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-gutter">
         {/* Columna izquierda: pitch editorial */}
         <div className="flex max-w-2xl flex-col items-start lg:col-span-8">
-          <div className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-surface-container-high px-2 py-0.5 font-Geist text-label-sm font-medium uppercase tracking-wider text-primary">
+          <div className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-surface-container-high px-2 py-0.5 font-Geist text-label-sm font-medium tracking-wider text-primary uppercase">
             <span className="material-symbols-outlined text-[15px]">verified</span>
             Canal Preferente para Doctores y Clínicas
           </div>
 
           <h1 className="mb-4 font-EB_Garamond text-headline-lg-mobile text-on-surface md:text-headline-lg">
-            Consulte con Nuestros{' '}
-            <span className="italic text-primary">Maestros Ceramistas</span> y Especialistas CAD/CAM.
+            Consulte con Nuestros <span className="text-primary italic">Maestros Ceramistas</span> y
+            Especialistas CAD/CAM.
           </h1>
 
           <p className="mb-6 max-w-2xl font-Hanken_Grotesk text-body-md text-on-surface-variant md:text-body-lg">
-            Obtenga asesoría técnica de alta fidelidad, valoración de viabilidad anatómica y presupuesto por correo electrónico en{' '}
-            <span className="font-medium text-secondary">menos de 2 horas hábiles</span>. Sin compromiso ni plantillas genéricas.
+            Obtenga asesoría técnica de alta fidelidad, valoración de viabilidad anatómica y
+            presupuesto por correo electrónico en{' '}
+            <span className="font-medium text-secondary">menos de 2 horas hábiles</span>. Sin
+            compromiso ni plantillas genéricas.
           </p>
 
           <div className="mb-6 flex w-full flex-wrap items-center gap-4">
@@ -49,7 +51,7 @@ const Hero = () => {
                   <span className="material-symbols-outlined text-[16px]">{icon}</span>
                   {value}
                 </span>
-                <span className="font-Geist text-label-sm uppercase tracking-wider text-outline">
+                <span className="font-Geist text-label-sm tracking-wider text-outline uppercase">
                   {label}
                 </span>
               </div>
@@ -68,10 +70,10 @@ const Hero = () => {
               />
               <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-surface-container-lowest via-transparent to-transparent" />
               <div className="pointer-events-none absolute inset-x-3 bottom-3 flex items-center justify-between">
-                <span className="rounded-sm bg-surface-container-lowest/80 px-2 py-1 font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary backdrop-blur-md">
+                <span className="rounded-sm bg-surface-container-lowest/80 px-2 py-1 font-Geist text-label-sm font-semibold tracking-wider text-primary uppercase backdrop-blur-md">
                   Atelier Anterior
                 </span>
-                <span className="font-Geist text-label-sm font-semibold uppercase tracking-wider text-on-surface">
+                <span className="font-Geist text-label-sm font-semibold tracking-wider text-on-surface uppercase">
                   Maquillaje Micrométrico
                 </span>
               </div>
