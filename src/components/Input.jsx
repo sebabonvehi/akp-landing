@@ -18,13 +18,13 @@ const Input = ({
         <div className="flex items-center justify-between gap-2">
           <label
             htmlFor={inputId}
-            className="font-Geist text-label-sm font-medium tracking-wider text-primary uppercase"
+            className="font-label text-label-sm font-medium tracking-wider text-primary uppercase"
           >
             {label}
             {required && ' *'}
           </label>
           {hint && (
-            <span className="shrink-0 font-Geist text-[9px] tracking-wider text-outline uppercase">
+            <span className="shrink-0 font-label text-[9px] tracking-wider text-outline uppercase">
               {hint}
             </span>
           )}
@@ -41,7 +41,7 @@ const Input = ({
           name={name}
           type={type}
           required={required}
-          className={`h-10 w-full rounded-sm bg-surface-container-lowest ${iconLeft ? 'pl-10' : 'pl-3'} ${iconRight ? 'pr-10' : 'pr-3'} font-Hanken_Grotesk text-body-md text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-on-surface-variant/80 focus:outline-primary ${className}`}
+          className={`h-10 w-full rounded-sm bg-surface-container-lowest ${iconLeft ? 'pl-10' : 'pl-3'} ${iconRight ? 'pr-10' : 'pr-3'} font-sans text-body-md text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-on-surface-variant/80 focus:outline-primary ${className}`}
           {...props}
         />
         {iconRight && (

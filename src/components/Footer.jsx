@@ -1,7 +1,7 @@
 const LOGO_SRC =
   'https://lh3.googleusercontent.com/aida/AEtjO1XMdOPUrTozpadQIo0ndZ2Ej1948iJL-7yam1jTuE3Rez-DBH4FzjkP3KeWqmU010pbDevonNcUSF83gBVLSicsWHz5bAiz4MmJoQKlHdDyBBslx4jLZNm-MRRLi7w7_DCHGkTaPgjW8Hp4nttxRzwk6CPbMK-KNtKNRpBXCRn2FMvWXKsz-_BnMGiNfe8sllMLvLUJAgLd3S5pFPEZbgmVbdGPsVXukBNDVnhfDShY1vfUlheG8qvI-A7K';
 
-const heading = 'mb-4 font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary';
+const heading = 'mb-4 font-label text-label-sm font-semibold uppercase tracking-wider text-primary';
 
 const badges = ['ISO 13485:2016', 'Biocompatible CE', '5-Axis Milling'];
 
@@ -25,11 +25,11 @@ const Footer = () => {
                 className="h-8 w-56 bg-on-surface object-contain"
                 src={LOGO_SRC}
               />
-              <span className="font-Geist text-label-md font-semibold tracking-wider text-primary uppercase">
+              <span className="font-label text-label-md font-semibold tracking-wider text-primary uppercase">
                 AKP Lab
               </span>
             </div>
-            <p className="mb-4 font-Hanken_Grotesk text-body-sm">
+            <p className="mb-4 font-sans text-body-sm">
               Laboratorio de alta precisión odontológica y artesanía cerámica de vanguardia.
               Ingeniería CAD/CAM y personalización anatómica sub-micrónica.
             </p>
@@ -37,7 +37,7 @@ const Footer = () => {
               {badges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-sm bg-surface-container-high px-1.5 py-0.5 font-Geist text-label-sm font-semibold text-on-surface uppercase"
+                  className="rounded-sm bg-surface-container-high px-1.5 py-0.5 font-label text-label-sm font-semibold text-on-surface uppercase"
                 >
                   {badge}
                 </span>
@@ -48,10 +48,10 @@ const Footer = () => {
           {/* Formatos */}
           <div>
             <h3 className={heading}>Formatos &amp; Archivos</h3>
-            <p className="mb-4 font-Hanken_Grotesk text-body-sm">
+            <p className="mb-4 font-sans text-body-sm">
               Recepción abierta de escaneos intraorales y de mesa:
             </p>
-            <ul className="flex flex-col gap-1 font-Hanken_Grotesk text-body-sm">
+            <ul className="flex flex-col gap-1 font-sans text-body-sm">
               {fileFormats.map((item) => (
                 <li key={item} className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-[16px] text-secondary">
@@ -66,13 +66,13 @@ const Footer = () => {
           {/* Contacto */}
           <div>
             <h3 className={heading}>Contacto Clínico Directo</h3>
-            <ul className="flex flex-col gap-2 font-Hanken_Grotesk text-body-sm">
+            <ul className="flex flex-col gap-2 font-sans text-body-sm">
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[18px] text-secondary">
                   phone_in_talk
                 </span>
                 <div>
-                  <span className="block font-Geist text-label-sm font-semibold text-on-surface uppercase">
+                  <span className="block font-label text-label-sm font-semibold text-on-surface uppercase">
                     Línea Directa Maestros Ceramistas:
                   </span>
                   <span>+34 910 240 890</span>
@@ -83,7 +83,7 @@ const Footer = () => {
                   schedule
                 </span>
                 <div>
-                  <span className="block font-Geist text-label-sm font-semibold text-on-surface uppercase">
+                  <span className="block font-label text-label-sm font-semibold text-on-surface uppercase">
                     Horario de Recepción:
                   </span>
                   <span>Lun - Vie: 08:00 - 19:30 CET</span>
@@ -92,7 +92,7 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[18px] text-secondary">mail</span>
                 <div>
-                  <span className="block font-Geist text-label-sm font-semibold text-on-surface uppercase">
+                  <span className="block font-label text-label-sm font-semibold text-on-surface uppercase">
                     Casos y Envíos:
                   </span>
                   <span>casos@akpdentallab.com</span>
@@ -104,15 +104,15 @@ const Footer = () => {
           {/* Área quirúrgica */}
           <div>
             <h3 className={heading}>Área Quirúrgica &amp; Estética</h3>
-            <p className="mb-2 font-Hanken_Grotesk text-body-sm">
+            <p className="mb-2 font-sans text-body-sm">
               Servicio exprés de sinterizado y estratificación en 24h para rehabilitaciones
               anteriores y guías quirúrgicas guiadas.
             </p>
             <div className="rounded-sm bg-surface-container p-2">
-              <span className="block font-Geist text-label-sm font-semibold text-secondary uppercase">
+              <span className="block font-label text-label-sm font-semibold text-secondary uppercase">
                 Calibración de Color
               </span>
-              <span className="block font-Hanken_Grotesk text-body-sm text-on-surface">
+              <span className="block font-sans text-body-sm text-on-surface">
                 Espectrofotometría digital e-LAB y protocolo VITA 3D-Master®
               </span>
             </div>
@@ -120,7 +120,7 @@ const Footer = () => {
         </div>
 
         {/* Línea legal */}
-        <div className="flex flex-col items-center justify-between gap-4 text-center font-Geist text-label-sm tracking-wider text-outline uppercase md:flex-row md:text-left">
+        <div className="flex flex-col items-center justify-between gap-4 text-center font-label text-label-sm tracking-wider text-outline uppercase md:flex-row md:text-left">
           <p>
             © 2025 AKP Digital Dental Lab. Todos los derechos reservados. Exactitud biomédica &amp;
             maestría estética.

@@ -44,10 +44,10 @@ const Form = () => {
       <div className="flex items-start gap-3 rounded-sm bg-surface-container-highest p-4 text-on-surface">
         <span className="material-symbols-outlined text-[24px] text-primary">check_circle</span>
         <div>
-          <span className="block font-Geist text-label-md font-semibold tracking-wider text-primary uppercase">
+          <span className="block font-label text-label-md font-semibold tracking-wider text-primary uppercase">
             Consulta Transmitida con Éxito
           </span>
-          <p className="font-Hanken_Grotesk text-sm text-on-surface-variant">
+          <p className="font-sans text-sm text-on-surface-variant">
             Hemos notificado a la mesa de ceramistas de guardia. En breve recibirá un correo de
             confirmación y el dictamen técnico detallado.
           </p>
@@ -137,7 +137,7 @@ const Form = () => {
           className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded-sm accent-primary"
           type="checkbox"
         />
-        <span className="font-Hanken_Grotesk text-body-sm text-on-surface-variant transition-colors group-hover:text-on-surface">
+        <span className="font-sans text-body-sm text-on-surface-variant transition-colors group-hover:text-on-surface">
           Deseo recibir además la{' '}
           <strong className="font-medium text-primary">
             Guía de Preparación Clínica &amp; Tabla de Precios 2025
@@ -166,7 +166,7 @@ const Form = () => {
             </>
           )}
         </Button>
-        <div className="flex items-center gap-1.5 font-Geist text-label-sm tracking-wider text-outline uppercase">
+        <div className="flex items-center gap-1.5 font-label text-label-sm tracking-wider text-outline uppercase">
           <span className="material-symbols-outlined text-[16px] text-secondary">
             verified_user
           </span>
