@@ -47,7 +47,14 @@ export function HeroSection() {
 
         <figure className="media-frame lg:col-span-4">
           <div className="relative h-64 overflow-hidden rounded-sm">
-            <img src={HERO_IMAGE.src} alt={HERO_IMAGE.alt} className="media-image" />
+            <img
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              width={HERO_IMAGE.width}
+              height={HERO_IMAGE.height}
+              fetchPriority="high"
+              className="media-image"
+            />
             <div className="media-overlay" aria-hidden="true" />
             <div className="media-caption">
               <span className="media-tag">{HERO_IMAGE.tag}</span>

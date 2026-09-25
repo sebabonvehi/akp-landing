@@ -42,7 +42,15 @@ export function ContactAside() {
       </Card>
 
       <figure className="relative h-44 overflow-hidden rounded-lg">
-        <img src={CONTACT_IMAGE.src} alt={CONTACT_IMAGE.alt} className="media-image" />
+        <img
+          src={CONTACT_IMAGE.src}
+          alt={CONTACT_IMAGE.alt}
+          width={CONTACT_IMAGE.width}
+          height={CONTACT_IMAGE.height}
+          loading="lazy"
+          decoding="async"
+          className="media-image"
+        />
         <div className="media-overlay" aria-hidden="true" />
         <figcaption className="media-caption">
           <span className="eyebrow">{CONTACT_IMAGE.tag}</span>
