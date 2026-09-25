@@ -1,36 +1,36 @@
 export const VALUE_PROPS_HEADING = {
-  eyebrow: 'Diferencial de Calidad Biomédica',
-  title: '¿Por Qué Consultar Previamente su Caso con AKP?',
+  eyebrow: 'Por qué AKP',
+  title: '¿Por qué consultar su caso con nosotros antes de fabricar?',
   description:
-    'Integración directa entre la mesa clínica y la fresadora 5 ejes para suprimir repeticiones de citas.',
+    'Una comunicación técnica directa entre el consultorio y el laboratorio evita repeticiones y citas extra.',
 };
 
 export const VALUE_PROPS = [
   {
     id: 'occlusion',
     icon: 'architecture',
-    badge: '01. Oclusión Dinámica',
-    title: 'Asesoría Protrusiva y Oclusal por Expertos Exocad & 3Shape',
+    badge: '01. Oclusión',
+    title: 'Revisión oclusal y de contactos en el diseño',
     description:
-      'Evaluamos puntos de contacto prematuros, curvas de Spee y Wilson y guías caninas antes de dar la orden de sinterización definitiva.',
-    footnote: 'Certificación oficial CAD',
+      'Evaluamos puntos de contacto, curvas de Spee y Wilson y guía canina en el diseño digital antes de fabricar.',
+    footnote: 'Diseño en Exocad y 3Shape',
   },
   {
-    id: 'biomimetics',
+    id: 'shade',
     icon: 'palette',
-    badge: '02. Biomimetismo',
-    title: 'Calibración Cromática con Fotos Polarizadas',
+    badge: '02. Estética',
+    title: 'Toma de color con fotografía polarizada',
     description:
-      'Análisis espectrofotométrico con mapas de translucidez incisal, halo lechoso y microtexturas superficiales basadas en guías VITA 3D-Master®.',
-    footnote: 'Protocolo e-LAB System',
+      'Analizamos translucidez incisal, halo y microtextura superficial a partir de sus fotos y la guía VITA.',
+    footnote: 'Protocolo VITA',
   },
   {
     id: 'partner',
     icon: 'card_membership',
-    badge: '03. Partner Clínico',
-    title: 'Tarifas Preferentes & Muestras Físicas de Materiales',
+    badge: '03. Trabajo conjunto',
+    title: 'Condiciones para clínicas y volumen',
     description:
-      'Acceda a condiciones corporativas por volumen y reciba en su clínica el kit premium de pastillas cerámicas, discos y acabados de prueba.',
-    footnote: 'Envío kit sin coste',
+      'Si trabaja con volumen o de forma recurrente, consúltenos por condiciones y muestras de materiales.',
+    footnote: 'Consulte condiciones',
   },
 ];
