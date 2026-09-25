@@ -1,6 +1,6 @@
 import zirconiaCrownImage from '../assets/zirconia-crown.webp';
 
-export const EMAIL_GENERAL = 'consultas@akpdentallab.com';
+export const EMAIL_GENERAL = 'akpdentalab@gmail.com';
 export const EMAIL_LAB = 'lab@akpdentallab.com';
 export const EMAIL_CASES = 'casos@akpdentallab.com';
 
@@ -9,7 +9,7 @@ export const PHONE_DISPLAY = '+54 9 11 3512-5178';
 export const PHONE_URL = `tel:${PHONE_E164}`;
 export const WHATSAPP_URL = `https://wa.me/${PHONE_E164.replace('+', '')}`;
 
-export const BUSINESS_HOURS = 'Lun a Vie · 08:30–19:30 (ART)';
+export const BUSINESS_HOURS = 'Lun a Vie · 08:00–17:00 (ART)';
 
 export const CONTACT_HEADING = {
   eyebrow: 'Admisión clínica digital',
