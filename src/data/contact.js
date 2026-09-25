@@ -1,8 +1,8 @@
 import zirconiaCrownImage from '../assets/zirconia-crown.webp';
 
 export const EMAIL_GENERAL = 'akpdentalab@gmail.com';
-export const EMAIL_LAB = 'lab@akpdentallab.com';
-export const EMAIL_CASES = 'casos@akpdentallab.com';
+export const EMAIL_LAB = 'akpdentalab@gmail.com';
+export const EMAIL_CASES = 'akpdentalab@gmail.com';
 
 export const PHONE_E164 = '+5491135125178';
 export const PHONE_DISPLAY = '+54 9 11 3512-5178';

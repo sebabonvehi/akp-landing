@@ -40,9 +40,7 @@ export const FOOTER_CONTACT = {
 export const FOOTER_HIGHLIGHT = {
   title: 'Cobertura',
   description:
-    'Trabajamos con profesionales de cualquier lugar: los casos se reciben en formato digital por email.',
-  label: 'Toma de color',
-  value: 'Protocolo VITA con fotografía clínica',
+    'Trabajamos con profesionales de cualquier lugar: los casos se reciben en formato digital por email.'
 };
 
 export const FOOTER_LEGAL = 'AKP Digital Dental Lab. Todos los derechos reservados.';
