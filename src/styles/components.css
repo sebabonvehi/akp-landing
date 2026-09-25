@@ -220,6 +220,10 @@
     @apply flex flex-col items-stretch justify-between gap-4 pt-2 sm:flex-row sm:items-center;
   }
 
+  .form-status {
+    @apply font-sans text-body-sm text-success;
+  }
+
   .form-success {
     @apply flex items-start gap-3 rounded border border-border-gold bg-surface-hover p-4;
   }

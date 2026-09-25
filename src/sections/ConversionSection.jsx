@@ -1,6 +1,6 @@
 import { Button } from '../components/Button.jsx';
 import { Icon } from '../components/Icon.jsx';
-import { CONVERSION_STRIP } from '../data/contact.js';
+import { CONVERSION_STRIP, WHATSAPP_URL } from '../data/contact.js';
 
 export function ConversionSection() {
   return (
@@ -17,9 +17,20 @@ export function ConversionSection() {
             <p className="body-sm">{CONVERSION_STRIP.description}</p>
           </div>
         </div>
-        <Button href={CONVERSION_STRIP.href} icon="outgoing_mail" className="shrink-0">
-          {CONVERSION_STRIP.cta}
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button href={CONVERSION_STRIP.href} icon="outgoing_mail">
+            {CONVERSION_STRIP.cta}
+          </Button>
+          <Button
+            href={WHATSAPP_URL}
+            variant="secondary"
+            icon="chat"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {CONVERSION_STRIP.whatsappCta}
+          </Button>
+        </div>
       </div>
     </section>
   );

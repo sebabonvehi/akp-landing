@@ -1,122 +1,69 @@
-import { useState } from 'react';
-
 import { Button } from '../components/Button.jsx';
 import { Icon } from '../components/Icon.jsx';
 import { Input } from '../components/Input.jsx';
 import { Textarea } from '../components/Textarea.jsx';
 import { FORM_COPY, FORM_FIELDS, SPECIALTIES } from '../data/contact.js';
+import { SEND_CHANNEL, useContactForm } from '../hooks/useContactForm.js';
 import { SpecialtyPills } from './SpecialtyPills.jsx';
 
-const INITIAL_VALUES = {
-  doctorName: '',
-  clinicName: '',
-  email: '',
-  phone: '',
-  specialty: SPECIALTIES[1].id,
-  subject: '',
-  message: '',
-  sendGuide: true,
+const SENT_MESSAGE = {
+  [SEND_CHANNEL.email]: FORM_COPY.sentEmail,
+  [SEND_CHANNEL.whatsapp]: FORM_COPY.sentWhatsApp,
 };
 
+function getStatusMessage({ hasErrors, sentChannel }) {
+  if (hasErrors) return FORM_COPY.invalid;
+  return sentChannel ? SENT_MESSAGE[sentChannel] : '';
+}
+
 export function ContactForm() {
-  const [values, setValues] = useState(INITIAL_VALUES);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  function handleChange(event) {
-    const { name, value, type, checked } = event.target;
-    setValues((previous) => ({ ...previous, [name]: type === 'checkbox' ? checked : value }));
-  }
-
-  function handleSpecialtySelect(specialty) {
-    setValues((previous) => ({ ...previous, specialty }));
-  }
+  const form = useContactForm();
+  const { values, errors } = form;
+  const statusMessage = getStatusMessage(form);
 
   function handleSubmit(event) {
     event.preventDefault();
-    setIsSubmitted(true);
-    setValues(INITIAL_VALUES);
+    form.send(SEND_CHANNEL.email);
   }
 
-  if (isSubmitted) {
-    return (
-      <output className="form-success">
-        <Icon name="check_circle" size="lg" className="text-gold" />
-        <div>
-          <p className="eyebrow">{FORM_COPY.successTitle}</p>
-          <p className="body-sm">{FORM_COPY.successMessage}</p>
-        </div>
-      </output>
-    );
+  function fieldProps(id) {
+    return {
+      id,
+      value: values[id],
+      error: errors[id],
+      onChange: form.handleChange,
+      ...FORM_FIELDS[id],
+    };
   }
 
   return (
-    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+    <form noValidate className="flex flex-col gap-4" onSubmit={handleSubmit}>
       <div className="form-row">
-        <Input
-          id="doctorName"
-          required
-          value={values.doctorName}
-          onChange={handleChange}
-          {...FORM_FIELDS.doctorName}
-        />
-        <Input
-          id="clinicName"
-          required
-          value={values.clinicName}
-          onChange={handleChange}
-          {...FORM_FIELDS.clinicName}
-        />
+        <Input required autoComplete="name" {...fieldProps('doctorName')} />
+        <Input required autoComplete="organization" {...fieldProps('clinicName')} />
       </div>
 
       <div className="form-row">
-        <Input
-          id="email"
-          type="email"
-          autoComplete="email"
-          required
-          value={values.email}
-          onChange={handleChange}
-          {...FORM_FIELDS.email}
-        />
-        <Input
-          id="phone"
-          type="tel"
-          autoComplete="tel"
-          value={values.phone}
-          onChange={handleChange}
-          {...FORM_FIELDS.phone}
-        />
+        <Input required type="email" autoComplete="email" {...fieldProps('email')} />
+        <Input type="tel" autoComplete="tel" {...fieldProps('phone')} />
       </div>
 
       <SpecialtyPills
         label={FORM_FIELDS.specialty.label}
         options={SPECIALTIES}
         selectedId={values.specialty}
-        onSelect={handleSpecialtySelect}
+        onSelect={form.handleSpecialtySelect}
       />
 
-      <Input
-        id="subject"
-        required
-        value={values.subject}
-        onChange={handleChange}
-        {...FORM_FIELDS.subject}
-      />
-
-      <Textarea
-        id="message"
-        required
-        value={values.message}
-        onChange={handleChange}
-        {...FORM_FIELDS.message}
-      />
+      <Input required {...fieldProps('subject')} />
+      <Textarea required {...fieldProps('message')} />
 
       <label className="checkbox-row">
         <input
           type="checkbox"
           name="sendGuide"
           checked={values.sendGuide}
-          onChange={handleChange}
+          onChange={form.handleChange}
           className="checkbox"
         />
         <span>
@@ -126,15 +73,29 @@ export function ContactForm() {
         </span>
       </label>
 
+      <p className="body-sm flex items-start gap-2">
+        <Icon name="drive_folder_upload" size="sm" className="mt-0.5 text-gold" />
+        {FORM_COPY.attachments}
+      </p>
+
       <div className="form-actions">
-        <Button type="submit" icon="mark_email_read" className="w-full sm:w-auto">
-          {FORM_COPY.submit}
-        </Button>
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <Button type="submit" icon="mail">
+            {FORM_COPY.submitEmail}
+          </Button>
+          <Button variant="secondary" icon="chat" onClick={() => form.send(SEND_CHANNEL.whatsapp)}>
+            {FORM_COPY.submitWhatsApp}
+          </Button>
+        </div>
         <p className="caption flex items-center gap-1.5">
           <Icon name="verified_user" size="sm" className="text-champagne" />
-          {FORM_COPY.security}
+          {FORM_COPY.privacy}
         </p>
       </div>
+
+      <p aria-live="polite" className={form.hasErrors ? 'input-error' : 'form-status'}>
+        {statusMessage}
+      </p>
     </form>
   );
 }
