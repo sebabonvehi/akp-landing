@@ -14,9 +14,9 @@ export function ContactAside() {
           {CONTACT_CHANNELS.items.map((channel) => (
             <li key={channel.id} className="inset-box">
               <span className="caption block">{channel.label}</span>
-              <a href={`mailto:${channel.email}`} className="text-link">
+              <a href={channel.href} className="text-link">
                 <Icon name={channel.icon} size="sm" />
-                {channel.email}
+                {channel.value}
               </a>
             </li>
           ))}

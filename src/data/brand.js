@@ -1,6 +1,6 @@
 export const BRAND_NAME = 'AKP Digital Dental Lab';
 export const BRAND_SHORT_NAME = 'AKP Lab';
-export const BRAND_TAGLINE = 'Haute Esthétique & CAD/CAM';
+export const BRAND_TAGLINE = 'Laboratorio dental digital · CAD/CAM';
 
 // TODO: replace with the final logo exported to src/assets (pending from the client).
 export const LOGO_SRC =

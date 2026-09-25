@@ -1,42 +1,48 @@
-import { BUSINESS_HOURS, EMAIL_CASES, PHONE_DISPLAY } from './contact.js';
+import { BUSINESS_HOURS, EMAIL_CASES, PHONE_DISPLAY, PHONE_URL } from './contact.js';
 
 export const FOOTER_ABOUT =
-  'Laboratorio de alta precisión odontológica y artesanía cerámica de vanguardia. Ingeniería CAD/CAM y personalización anatómica sub-micrónica.';
+  'Laboratorio dental digital. Restauraciones protésicas diseñadas y fabricadas con flujo CAD/CAM.';
 
-export const FOOTER_BADGES = ['ISO 13485:2016', 'Biocompatible CE', '5-Axis Milling'];
+export const FOOTER_BADGES = ['ISO 13485:2016', 'Biocompatible CE', 'Fresado 5 ejes'];
 
 export const FILE_FORMATS = {
-  title: 'Formatos & Archivos',
-  description: 'Recepción abierta de escaneos intraorales y de mesa:',
+  title: 'Formatos y archivos',
+  description: 'Recibimos escaneos intraorales y de mesa:',
   items: [
-    'Archivos STL Abiertos (3D Mesh)',
-    'PLY con textura y color digital',
-    'OBJ alta definición geométrica',
-    'Sistemas iTero, 3Shape, Medit, PrimeScan',
+    'STL',
+    'PLY con textura y color',
+    'OBJ',
+    'Exportaciones de iTero, 3Shape, Medit y Primescan',
   ],
 };
 
 export const FOOTER_CONTACT = {
-  title: 'Contacto Clínico Directo',
+  title: 'Contacto',
   items: [
     {
       id: 'phone',
       icon: 'phone_in_talk',
-      label: 'Línea Directa Maestros Ceramistas:',
+      label: 'Teléfono / WhatsApp',
       value: PHONE_DISPLAY,
+      href: PHONE_URL,
     },
-    { id: 'hours', icon: 'schedule', label: 'Horario de Recepción:', value: BUSINESS_HOURS },
-    { id: 'cases', icon: 'mail', label: 'Casos y Envíos:', value: EMAIL_CASES },
+    { id: 'hours', icon: 'schedule', label: 'Horario de atención', value: BUSINESS_HOURS },
+    {
+      id: 'cases',
+      icon: 'mail',
+      label: 'Casos y archivos',
+      value: EMAIL_CASES,
+      href: `mailto:${EMAIL_CASES}`,
+    },
   ],
 };
 
 export const FOOTER_HIGHLIGHT = {
-  title: 'Área Quirúrgica & Estética',
+  title: 'Cobertura',
   description:
-    'Servicio exprés de sinterizado y estratificación en 24h para rehabilitaciones anteriores y guías quirúrgicas guiadas.',
-  label: 'Calibración de Color',
-  value: 'Espectrofotometría digital e-LAB y protocolo VITA 3D-Master®',
+    'Trabajamos con profesionales de cualquier lugar: los casos se reciben en formato digital por email.',
+  label: 'Toma de color',
+  value: 'Protocolo VITA con fotografía clínica',
 };
 
-export const FOOTER_LEGAL =
-  'AKP Digital Dental Lab. Todos los derechos reservados. Exactitud biomédica & maestría estética.';
+export const FOOTER_LEGAL = 'AKP Digital Dental Lab. Todos los derechos reservados.';

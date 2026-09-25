@@ -52,7 +52,13 @@ export function SiteFooter() {
                   <Icon name={item.icon} className="text-champagne" />
                   <span>
                     <span className="caption block text-on-surface">{item.label}</span>
-                    <span className="body-sm">{item.value}</span>
+                    {item.href ? (
+                      <a href={item.href} className="body-sm hover:text-gold">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <span className="body-sm">{item.value}</span>
+                    )}
                   </span>
                 </li>
               ))}
