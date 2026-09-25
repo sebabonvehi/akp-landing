@@ -1,3 +1,5 @@
+import zirconiaCrownImage from '../assets/zirconia-crown.webp';
+
 export const EMAIL_GENERAL = 'consultas@akpdentallab.com';
 export const EMAIL_LAB = 'lab@akpdentallab.com';
 export const EMAIL_CASES = 'casos@akpdentallab.com';
@@ -56,10 +58,11 @@ export const LARGE_FILES = {
     'Revisamos cada caso junto al profesional y acordamos los detalles antes de avanzar con el diseño.',
 };
 
-// TODO: replace with an optimized local photo (pending from the client).
 export const CONTACT_IMAGE = {
-  src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAITeXJEALxB8QsdFKTriWxyDp5tLv95vJBxOaiVcNUP19O1mMM64sFWPOG3dExMdzxz29rY7BW4wWeDGBswt22DcisJvT3iM74Z-twPrOlqUOX0ZwqVqmkZumphsXjMXVjQJOGZwpTgBihz3BhUckdI471-bHN8z79RfY7JjbiKbHO2JUYKaxAY9ZyiXymPZa_1nCqNrt-gJpgqyzZICmBum4KwztZ3qls0kuNQmrtZTPo67VxX4bKLQ',
-  alt: 'Estructura de zirconio sobre mesa de trabajo',
+  src: zirconiaCrownImage,
+  width: 512,
+  height: 279,
+  alt: 'Corona sobre soporte en la mesa de trabajo del laboratorio',
   tag: 'Estructuras de zirconio',
   caption: 'Diseño CAD/CAM',
 };

@@ -1,6 +1,6 @@
 import { Button } from '../components/Button.jsx';
 import { Icon } from '../components/Icon.jsx';
-import { BRAND_NAME, BRAND_TAGLINE, LOGO_ALT, LOGO_SRC } from '../data/brand.js';
+import { BRAND_MONOGRAM, BRAND_NAME, BRAND_TAGLINE } from '../data/brand.js';
 import {
   HEADER_CTA,
   MENU_LABELS,
@@ -23,10 +23,12 @@ export function SiteHeader() {
 
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
         <a href="#content" className="flex min-w-0 items-center gap-3">
-          <img src={LOGO_SRC} alt={LOGO_ALT} className="logo" />
-          <span className="hidden flex-col lg:flex">
+          <span className="wordmark" aria-hidden="true">
+            {BRAND_MONOGRAM}
+          </span>
+          <span className="flex flex-col">
             <span className="brand-name">{BRAND_NAME}</span>
-            <span className="caption text-on-surface">{BRAND_TAGLINE}</span>
+            <span className="caption hidden text-on-surface lg:block">{BRAND_TAGLINE}</span>
           </span>
         </a>
 
