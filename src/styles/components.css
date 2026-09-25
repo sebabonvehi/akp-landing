@@ -132,6 +132,26 @@
     @apply px-2 py-1 font-label text-label-sm text-on-surface uppercase transition-colors hover:text-gold;
   }
 
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-gold focus:px-4 focus:py-2 focus:text-canvas;
+  }
+
+  .menu-toggle {
+    @apply flex size-10 items-center justify-center rounded border border-gold/40 text-champagne;
+  }
+
+  .mobile-nav {
+    @apply mx-auto flex max-w-7xl flex-col gap-1 border-t border-border-gold px-margin-mobile py-4;
+  }
+
+  .mobile-nav-link {
+    @apply rounded px-2 py-3 font-label text-label-lg text-on-surface uppercase hover:bg-surface-hover;
+  }
+
+  .list-item-check {
+    @apply flex items-start gap-1.5 font-sans text-body-sm text-on-surface-variant;
+  }
+
   .status-bar {
     @apply border-y border-border-gold bg-canvas py-1 font-label text-label-sm text-on-surface-variant uppercase;
   }
