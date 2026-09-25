@@ -14,7 +14,7 @@ const SpecialtyPills = () => {
 
   return (
     <div className="flex flex-col gap-2">
-      <span className="font-Geist text-label-sm font-medium tracking-wider text-primary uppercase">
+      <span className="font-label text-label-sm font-medium tracking-wider text-primary uppercase">
         Tipo de Consulta / Servicio de Interés *
       </span>
       <div className="flex flex-wrap gap-1.5">
@@ -24,7 +24,7 @@ const SpecialtyPills = () => {
             type="button"
             aria-pressed={selectedPill === index}
             onClick={() => setSelectedPill(index)}
-            className={`rounded-sm px-3 py-1 font-Geist text-label-sm font-medium tracking-wider uppercase transition-colors ${
+            className={`rounded-sm px-3 py-1 font-label text-label-sm font-medium tracking-wider uppercase transition-colors ${
               selectedPill === index
                 ? 'bg-primary-container text-on-primary-container hover:bg-primary'
                 : 'bg-surface-container-lowest text-on-surface-variant hover:text-primary'

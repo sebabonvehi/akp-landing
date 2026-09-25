@@ -28,10 +28,10 @@ const Header = () => {
             src={LOGO_SRC}
           />
           <div className="hidden flex-col lg:flex">
-            <span className="font-Geist text-label-md font-semibold tracking-widest text-primary uppercase">
+            <span className="font-label text-label-md font-semibold tracking-widest text-primary uppercase">
               AKP Digital Dental Lab
             </span>
-            <span className="font-Geist text-label-sm font-medium tracking-wider text-on-surface uppercase">
+            <span className="font-label text-label-sm font-medium tracking-wider text-on-surface uppercase">
               Haute Esthétique &amp; CAD/CAM
             </span>
           </div>
@@ -39,7 +39,7 @@ const Header = () => {
 
         <nav className="hidden items-center gap-4 md:flex">
           <a
-            className="px-2 py-1 font-Geist text-label-sm font-medium tracking-wider text-on-surface uppercase transition-colors hover:text-primary"
+            className="px-2 py-1 font-label text-label-sm font-medium tracking-wider text-on-surface uppercase transition-colors hover:text-primary"
             data-path="el-atelier"
             href="#"
           >

@@ -26,13 +26,13 @@ const FAQAccordion = () => {
     <div className="flex flex-col gap-2">
       {faqs.map((faq) => (
         <details key={faq.question} className="group rounded-lg bg-surface-container px-4">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-EB_Garamond text-headline-sm text-on-surface [&::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-serif text-headline-sm text-on-surface [&::-webkit-details-marker]:hidden">
             <span>{faq.question}</span>
             <span className="material-symbols-outlined shrink-0 text-primary transition-transform group-open:rotate-180">
               expand_more
             </span>
           </summary>
-          <p className="pb-4 font-Hanken_Grotesk text-sm text-on-surface-variant">{faq.answer}</p>
+          <p className="pb-4 font-sans text-sm text-on-surface-variant">{faq.answer}</p>
         </details>
       ))}
     </div>

@@ -7,7 +7,7 @@ const Button = ({ children, variant = 'primary', size = 'md', href, className = 
   const componentProps = href ? { href, ...props } : { type: 'button', ...props };
 
   const baseClasses =
-    'inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-sm font-Geist text-[11px] font-semibold uppercase tracking-wider leading-none transition-colors [&_.material-symbols-outlined]:text-[18px]';
+    'inline-flex h-9 items-center justify-center gap-2 whitespace-nowrap rounded-sm font-label text-[11px] font-semibold uppercase tracking-wider leading-none transition-colors [&_.material-symbols-outlined]:text-[18px]';
 
   const sizeClasses = {
     md: 'px-6',

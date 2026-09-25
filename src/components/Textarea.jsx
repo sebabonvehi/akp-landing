@@ -7,13 +7,13 @@ const Textarea = ({ label, hint, required, className = '', rows = 4, id, name, .
         <div className="flex items-center justify-between gap-2">
           <label
             htmlFor={textareaId}
-            className="font-Geist text-label-sm font-medium tracking-wider text-primary uppercase"
+            className="font-label text-label-sm font-medium tracking-wider text-primary uppercase"
           >
             {label}
             {required && ' *'}
           </label>
           {hint && (
-            <span className="hidden font-Geist text-label-sm text-outline sm:inline">{hint}</span>
+            <span className="hidden font-label text-label-sm text-outline sm:inline">{hint}</span>
           )}
         </div>
       )}
@@ -22,7 +22,7 @@ const Textarea = ({ label, hint, required, className = '', rows = 4, id, name, .
         name={name}
         required={required}
         rows={rows}
-        className={`w-full resize-y rounded-sm bg-surface-container-lowest p-3 font-Hanken_Grotesk text-body-md text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-on-surface-variant/80 focus:outline-primary ${className}`}
+        className={`w-full resize-y rounded-sm bg-surface-container-lowest p-3 font-sans text-body-md text-on-surface outline outline-1 outline-transparent transition-colors placeholder:text-on-surface-variant/80 focus:outline-primary ${className}`}
         {...props}
       />
     </div>
