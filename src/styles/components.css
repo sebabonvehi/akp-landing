@@ -68,8 +68,167 @@
     @apply border-gold bg-gold text-canvas hover:bg-champagne;
   }
 
-  .icon,
-  .material-symbols-outlined {
+  .section-heading {
+    @apply flex flex-col gap-1;
+  }
+
+  .section-description {
+    @apply max-w-2xl font-sans text-body-md text-on-surface-variant;
+  }
+
+  .text-center .section-description {
+    @apply mx-auto;
+  }
+
+  .caption {
+    @apply font-label text-label-sm text-outline uppercase;
+  }
+
+  .body-sm {
+    @apply font-sans text-body-sm text-on-surface-variant;
+  }
+
+  .card-title {
+    @apply font-serif text-headline-sm text-on-surface;
+  }
+
+  .card-interactive {
+    @apply flex h-full flex-col gap-2 transition-colors hover:bg-surface-hover;
+  }
+
+  .inset-box {
+    @apply flex flex-col rounded-sm bg-canvas p-2;
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-2 font-label text-label-md text-gold hover:underline;
+  }
+
+  .icon-box {
+    @apply mb-1 flex size-10 items-center justify-center rounded bg-surface-hover text-gold;
+  }
+
+  .icon-box-solid {
+    @apply flex size-10 shrink-0 items-center justify-center rounded bg-gold text-canvas;
+  }
+
+  .badge {
+    @apply rounded-sm bg-surface-hover px-1.5 py-0.5 font-label text-label-sm text-on-surface uppercase;
+  }
+
+  .site-header {
+    @apply fixed inset-x-0 top-0 z-50 border-b border-border-gold bg-canvas/90 shadow-level-2 backdrop-blur-xl;
+  }
+
+  .logo {
+    @apply h-8 w-56 max-w-[38vw] bg-on-surface object-contain;
+  }
+
+  .brand-name {
+    @apply font-label text-label-md text-gold uppercase;
+  }
+
+  .nav-link {
+    @apply px-2 py-1 font-label text-label-sm text-on-surface uppercase transition-colors hover:text-gold;
+  }
+
+  .status-bar {
+    @apply border-y border-border-gold bg-canvas py-1 font-label text-label-sm text-on-surface-variant uppercase;
+  }
+
+  .status-dot {
+    @apply size-1.5 animate-pulse rounded-full bg-gold;
+  }
+
+  .hero-badge {
+    @apply inline-flex items-center gap-1.5 rounded border border-border-gold px-2 py-0.5 font-label text-label-sm text-gold uppercase;
+  }
+
+  .hero-title {
+    @apply font-serif text-headline-lg-mobile text-on-surface md:text-headline-lg;
+  }
+
+  .hero-description {
+    @apply max-w-2xl font-sans text-body-md text-on-surface-variant md:text-body-lg;
+  }
+
+  .hero-metrics {
+    @apply grid w-full gap-2 rounded border border-border-gold bg-surface-hover p-2 sm:grid-cols-3;
+  }
+
+  .metric-value {
+    @apply flex items-center gap-1.5 font-label text-label-lg text-gold;
+  }
+
+  .media-frame {
+    @apply w-full overflow-hidden rounded-lg border border-border-gold bg-surface-hover p-2;
+  }
+
+  .media-image {
+    @apply size-full object-cover opacity-90;
+  }
+
+  .media-overlay {
+    @apply pointer-events-none absolute inset-0 bg-linear-to-t from-canvas via-transparent to-transparent;
+  }
+
+  .media-caption {
+    @apply pointer-events-none absolute inset-x-3 bottom-3 flex items-center justify-between;
+  }
+
+  .media-tag {
+    @apply rounded-sm bg-canvas/80 px-2 py-1 font-label text-label-sm text-gold uppercase backdrop-blur-md;
+  }
+
+  .field {
+    @apply flex flex-col gap-1;
+  }
+
+  .field-header {
+    @apply flex items-center justify-between gap-2;
+  }
+
+  .input-icon {
+    @apply pointer-events-none absolute left-3 text-gold;
+  }
+
+  .form-row {
+    @apply grid gap-4 md:grid-cols-2;
+  }
+
+  .form-actions {
+    @apply flex flex-col items-stretch justify-between gap-4 pt-2 sm:flex-row sm:items-center;
+  }
+
+  .form-success {
+    @apply flex items-start gap-3 rounded border border-border-gold bg-surface-hover p-4;
+  }
+
+  .checkbox-row {
+    @apply flex cursor-pointer items-start gap-2 font-sans text-body-sm text-on-surface-variant select-none;
+  }
+
+  .checkbox {
+    @apply mt-0.5 size-4 shrink-0 cursor-pointer rounded-sm accent-gold;
+  }
+
+  .faq-item {
+    @apply rounded border border-border-gold bg-surface px-4;
+  }
+
+  .faq-question {
+    @apply flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-serif text-headline-sm text-on-surface;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-chevron {
+    @apply shrink-0 text-gold transition-transform group-open:rotate-180;
+  }
+
+  .icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
