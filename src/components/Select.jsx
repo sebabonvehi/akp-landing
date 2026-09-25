@@ -1,29 +1,34 @@
 import { getDescribedBy } from '../lib/fieldA11y.js';
 import { FieldShell } from './FieldShell.jsx';
 
-const DEFAULT_ROWS = 4;
-
-export function Textarea({
+export function Select({
   id,
   label,
+  options,
+  placeholder = '',
   hint = '',
   error = '',
-  rows = DEFAULT_ROWS,
   required = false,
   ...props
 }) {
   return (
     <FieldShell id={id} label={label} hint={hint} error={error} isRequired={required}>
-      <textarea
+      <select
         id={id}
         name={id}
-        rows={rows}
         required={required}
         aria-invalid={Boolean(error)}
         aria-describedby={getDescribedBy(id, { hint, error })}
-        className="input-field resize-y"
+        className="input-field"
         {...props}
-      />
+      >
+        {placeholder && <option value="">{placeholder}</option>}
+        {options.map((option) => (
+          <option key={option.id} value={option.id}>
+            {option.label}
+          </option>
+        ))}
+      </select>
     </FieldShell>
   );
 }

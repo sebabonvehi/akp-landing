@@ -1,0 +1,148 @@
+/* Tokens mapped from DESIGN.md: front-matter (Material names) plus prose values. */
+@theme {
+  --color-background: #121316;
+  --color-on-background: #e3e2e6;
+
+  --color-surface: #121316;
+  --color-surface-dim: #121316;
+  --color-surface-bright: #38393c;
+  --color-surface-variant: #343538;
+  --color-surface-tint: #e9c349;
+  --color-surface-container-lowest: #0d0e11;
+  --color-surface-container-low: #1b1b1f;
+  --color-surface-container: #1f1f23;
+  --color-surface-container-high: #292a2d;
+  --color-surface-container-highest: #343538;
+
+  --color-on-surface: #e3e2e6;
+  --color-on-surface-variant: #d0c5af;
+  --color-inverse-surface: #e3e2e6;
+  --color-inverse-on-surface: #2f3034;
+
+  --color-outline: #99907c;
+  --color-outline-variant: #4d4635;
+
+  --color-primary: #f2ca50;
+  --color-on-primary: #3c2f00;
+  --color-primary-container: #d4af37;
+  --color-on-primary-container: #554300;
+  --color-inverse-primary: #735c00;
+  --color-primary-fixed: #ffe088;
+  --color-primary-fixed-dim: #e9c349;
+  --color-on-primary-fixed: #241a00;
+  --color-on-primary-fixed-variant: #574500;
+
+  --color-secondary: #d4c78f;
+  --color-on-secondary: #383006;
+  --color-secondary-container: #4f471b;
+  --color-on-secondary-container: #c2b57f;
+  --color-secondary-fixed: #f1e3a9;
+  --color-secondary-fixed-dim: #d4c78f;
+  --color-on-secondary-fixed: #211b00;
+  --color-on-secondary-fixed-variant: #4f471b;
+
+  --color-tertiary: #f3c87a;
+  --color-on-tertiary: #412d00;
+  --color-tertiary-container: #d5ad62;
+  --color-on-tertiary-container: #5b4000;
+  --color-tertiary-fixed: #ffdea5;
+  --color-tertiary-fixed-dim: #eac173;
+  --color-on-tertiary-fixed: #271900;
+  --color-on-tertiary-fixed-variant: #5d4200;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-canvas: #0a0b0d;
+  --color-surface-hover: #1a1c21;
+  --color-surface-modal: #1e2026;
+  --color-surface-button: #16181d;
+  --color-input: #0e1013;
+  --color-gold: #d4af37;
+  --color-champagne: #f3e5ab;
+  --color-bronze: #9e7b35;
+  --color-border-gold: rgb(212 175 55 / 0.15);
+  --color-success: #78b159;
+  --color-warning: #d97736;
+  --color-danger: #c24141;
+  --color-scan: #6495ed;
+
+  --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-label: 'Geist', ui-sans-serif, system-ui, sans-serif;
+
+  --text-display-lg: 56px;
+  --text-display-lg--line-height: 64px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 400;
+  --text-display-lg-mobile: 36px;
+  --text-display-lg-mobile--line-height: 44px;
+  --text-display-lg-mobile--letter-spacing: -0.01em;
+  --text-display-lg-mobile--font-weight: 400;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.015em;
+  --text-headline-lg--font-weight: 400;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 400;
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-md--letter-spacing: 0em;
+  --text-headline-md--font-weight: 500;
+  --text-headline-sm: 22px;
+  --text-headline-sm--line-height: 30px;
+  --text-headline-sm--letter-spacing: 0em;
+  --text-headline-sm--font-weight: 500;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: -0.005em;
+  --text-body-lg--font-weight: 400;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0em;
+  --text-body-md--font-weight: 400;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0.01em;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-lg: 13px;
+  --text-label-lg--line-height: 18px;
+  --text-label-lg--letter-spacing: 0.06em;
+  --text-label-lg--font-weight: 500;
+  --text-label-md: 11px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.08em;
+  --text-label-md--font-weight: 500;
+  --text-label-sm: 10px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.12em;
+  --text-label-sm--font-weight: 600;
+
+  --radius-sm: 0.125rem;
+  --radius: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-tablet: 1rem;
+  --spacing-gutter-mobile: 0.75rem;
+  --spacing-margin: 3rem;
+  --spacing-margin-tablet: 2rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+
+  --shadow-level-2: 0 8px 32px rgb(0 0 0 / 0.65), 0 0 16px rgb(212 175 55 / 0.05);
+  --shadow-focus-gold: 0 0 8px rgb(212 175 55 / 0.2);
+}
