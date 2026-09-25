@@ -124,6 +124,10 @@
     @apply flex h-10 shrink-0 items-center rounded border border-gold/40 px-2 font-serif text-headline-sm text-gold;
   }
 
+  .brand-logo {
+    @apply w-auto shrink-0 rounded object-contain;
+  }
+
   .brand-name {
     @apply font-label text-label-md text-gold uppercase;
   }

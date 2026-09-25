@@ -1,5 +1,5 @@
 import { Icon } from '../components/Icon.jsx';
-import { BRAND_MONOGRAM, BRAND_NAME } from '../data/brand.js';
+import { BRAND_LOGO, BRAND_NAME } from '../data/brand.js';
 import {
   FILE_FORMATS,
   FOOTER_ABOUT,
@@ -17,12 +17,7 @@ export function SiteFooter() {
       <div className="container-page">
         <div className="mb-10 grid gap-8 sm:grid-cols-2 lg:mb-16 lg:grid-cols-4 lg:gap-gutter">
           <div>
-            <div className="mb-4 flex items-center gap-2">
-              <span className="wordmark" aria-hidden="true">
-                {BRAND_MONOGRAM}
-              </span>
-              <span className="brand-name">{BRAND_NAME}</span>
-            </div>
+            <img src={BRAND_LOGO} alt={BRAND_NAME} className="brand-logo mb-4 h-20" loading="lazy" />
             <p className="body-sm mb-4">{FOOTER_ABOUT}</p>
             <ul className="flex flex-wrap gap-1">
               {FOOTER_BADGES.map((badge) => (

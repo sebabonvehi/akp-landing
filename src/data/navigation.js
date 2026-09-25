@@ -1,5 +1,3 @@
-export const SKIP_LINK_LABEL = 'Saltar al contenido';
-
 export const NAV_LABEL = 'Principal';
 
 export const MENU_LABELS = { open: 'Abrir menú', close: 'Cerrar menú' };
