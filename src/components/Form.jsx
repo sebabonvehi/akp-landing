@@ -44,11 +44,12 @@ const Form = () => {
       <div className="flex items-start gap-3 rounded-sm bg-surface-container-highest p-4 text-on-surface">
         <span className="material-symbols-outlined text-[24px] text-primary">check_circle</span>
         <div>
-          <span className="block font-Geist text-label-md font-semibold uppercase tracking-wider text-primary">
+          <span className="block font-Geist text-label-md font-semibold tracking-wider text-primary uppercase">
             Consulta Transmitida con Éxito
           </span>
           <p className="font-Hanken_Grotesk text-sm text-on-surface-variant">
-            Hemos notificado a la mesa de ceramistas de guardia. En breve recibirá un correo de confirmación y el dictamen técnico detallado.
+            Hemos notificado a la mesa de ceramistas de guardia. En breve recibirá un correo de
+            confirmación y el dictamen técnico detallado.
           </p>
         </div>
       </div>
@@ -128,7 +129,7 @@ const Form = () => {
         rows={4}
       />
 
-      <label className="group flex cursor-pointer select-none items-start gap-2">
+      <label className="group flex cursor-pointer items-start gap-2 select-none">
         <input
           checked={formState.sendGuide}
           onChange={handleChange}
@@ -165,8 +166,10 @@ const Form = () => {
             </>
           )}
         </Button>
-        <div className="flex items-center gap-1.5 font-Geist text-label-sm uppercase tracking-wider text-outline">
-          <span className="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+        <div className="flex items-center gap-1.5 font-Geist text-label-sm tracking-wider text-outline uppercase">
+          <span className="material-symbols-outlined text-[16px] text-secondary">
+            verified_user
+          </span>
           Cifrado SSL 256-Bit para datos clínicos
         </div>
       </div>

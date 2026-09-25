@@ -32,7 +32,8 @@ function App() {
               Formulario de Valoración Directa por Email
             </h2>
             <p className="mx-auto max-w-2xl font-Hanken_Grotesk text-body-md text-on-surface-variant md:mx-0">
-              Complete los detalles de su caso. Nuestros directores de laboratorio estudiarán los datos antes de emitir un dictamen técnico exhaustivo a su correo.
+              Complete los detalles de su caso. Nuestros directores de laboratorio estudiarán los
+              datos antes de emitir un dictamen técnico exhaustivo a su correo.
             </p>
           </div>
 
@@ -44,7 +45,7 @@ function App() {
             <aside className="flex flex-col gap-4 lg:col-span-4">
               {/* Canales inmediatos */}
               <div className="relative rounded-lg bg-surface-container p-4">
-                <span className="material-symbols-outlined absolute right-4 top-4 text-[24px] text-primary/10">
+                <span className="material-symbols-outlined absolute top-4 right-4 text-[24px] text-primary/10">
                   alternate_email
                 </span>
                 <span className={`${eyebrow} mb-4`}>Canales Inmediatos</span>
@@ -52,12 +53,13 @@ function App() {
                   Atención Directa por Email
                 </h3>
                 <p className="mb-4 font-Hanken_Grotesk text-body-sm text-on-surface-variant">
-                  Si ya cuenta con orden de trabajo propia o prefiere comunicarse desde su cliente de correo predilecto:
+                  Si ya cuenta con orden de trabajo propia o prefiere comunicarse desde su cliente
+                  de correo predilecto:
                 </p>
 
                 <div className="flex flex-col gap-1">
                   <div className="rounded-sm bg-surface-container-lowest p-2">
-                    <span className="block font-Geist text-label-sm uppercase tracking-wider text-outline">
+                    <span className="block font-Geist text-label-sm tracking-wider text-outline uppercase">
                       Consultas generales &amp; presupuestos:
                     </span>
                     <a
@@ -69,7 +71,7 @@ function App() {
                     </a>
                   </div>
                   <div className="rounded-sm bg-surface-container-lowest p-2">
-                    <span className="block font-Geist text-label-sm uppercase tracking-wider text-outline">
+                    <span className="block font-Geist text-label-sm tracking-wider text-outline uppercase">
                       Dirección técnica &amp; CAD/CAM:
                     </span>
                     <a
@@ -83,7 +85,7 @@ function App() {
                 </div>
 
                 <div className="mt-4">
-                  <span className="block font-Geist text-label-sm font-semibold uppercase tracking-wider text-on-surface">
+                  <span className="block font-Geist text-label-sm font-semibold tracking-wider text-on-surface uppercase">
                     Horario equipo ceramista
                   </span>
                   <div className="mt-1 flex items-center gap-2 font-Hanken_Grotesk text-sm text-on-surface-variant">
@@ -95,18 +97,20 @@ function App() {
 
               {/* Archivos voluminosos */}
               <div className="rounded-lg bg-surface-container p-4">
-                <div className="mb-2 flex items-center gap-2 font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary">
+                <div className="mb-2 flex items-center gap-2 font-Geist text-label-sm font-semibold tracking-wider text-primary uppercase">
                   <span className="material-symbols-outlined text-[18px]">drive_folder_upload</span>
                   ¿Archivos STL o PLY voluminosos?
                 </div>
                 <p className="mb-2 font-Hanken_Grotesk text-body-sm text-on-surface-variant">
-                  Puede transferir sus escaneados intraorales mediante WeTransfer, Dropbox o Google Drive directamente al email clínico:
+                  Puede transferir sus escaneados intraorales mediante WeTransfer, Dropbox o Google
+                  Drive directamente al email clínico:
                 </p>
                 <div className="rounded-sm bg-surface-container-lowest p-2 text-center font-mono text-[11px] text-secondary">
                   casos@akpdentallab.com
                 </div>
-                <p className="mt-2.5 font-Hanken_Grotesk text-body-sm italic text-outline">
-                  «Revisamos cada correo con lupa clínica antes de responder; garantizamos cero margen de error en asentamientos protésicos.»
+                <p className="mt-2.5 font-Hanken_Grotesk text-body-sm text-outline italic">
+                  «Revisamos cada correo con lupa clínica antes de responder; garantizamos cero
+                  margen de error en asentamientos protésicos.»
                 </p>
               </div>
 
@@ -119,7 +123,7 @@ function App() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-transparent to-transparent" />
                 <div className="absolute inset-x-3 bottom-2 flex items-center justify-between">
-                  <span className="font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary">
+                  <span className="font-Geist text-label-sm font-semibold tracking-wider text-primary uppercase">
                     Estructuras Zirconio
                   </span>
                   <span className="font-Geist text-label-md font-semibold text-on-surface">

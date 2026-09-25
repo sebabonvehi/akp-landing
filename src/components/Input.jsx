@@ -18,13 +18,13 @@ const Input = ({
         <div className="flex items-center justify-between gap-2">
           <label
             htmlFor={inputId}
-            className="font-Geist text-label-sm font-medium uppercase tracking-wider text-primary"
+            className="font-Geist text-label-sm font-medium tracking-wider text-primary uppercase"
           >
             {label}
             {required && ' *'}
           </label>
           {hint && (
-            <span className="shrink-0 font-Geist text-[9px] uppercase tracking-wider text-outline">
+            <span className="shrink-0 font-Geist text-[9px] tracking-wider text-outline uppercase">
               {hint}
             </span>
           )}

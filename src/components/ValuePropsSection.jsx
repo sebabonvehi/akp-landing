@@ -33,7 +33,7 @@ const ValuePropsSection = () => {
       <div className="mx-auto flex max-w-7xl flex-col gap-6">
         <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
           <div>
-            <span className="mb-1 block font-Geist text-label-sm font-semibold uppercase tracking-wider text-primary">
+            <span className="mb-1 block font-Geist text-label-sm font-semibold tracking-wider text-primary uppercase">
               Diferencial de Calidad Biomédica
             </span>
             <h2 className="font-EB_Garamond text-headline-sm text-on-surface md:text-headline-md">
@@ -41,7 +41,8 @@ const ValuePropsSection = () => {
             </h2>
           </div>
           <p className="max-w-md font-Hanken_Grotesk text-sm text-on-surface-variant">
-            Integración directa entre la mesa clínica y la fresadora 5 ejes para suprimir repeticiones de citas.
+            Integración directa entre la mesa clínica y la fresadora 5 ejes para suprimir
+            repeticiones de citas.
           </p>
         </div>
 

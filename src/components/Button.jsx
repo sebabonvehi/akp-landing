@@ -2,14 +2,7 @@
  * Botón reutilizable. Si recibe `href` se renderiza como <a>, si no como <button>.
  * size: 'md' (px-6) | 'lg' (px-8)
  */
-const Button = ({
-  children,
-  variant = 'primary',
-  size = 'md',
-  href,
-  className = '',
-  ...props
-}) => {
+const Button = ({ children, variant = 'primary', size = 'md', href, className = '', ...props }) => {
   const Component = href ? 'a' : 'button';
   const componentProps = href ? { href, ...props } : { type: 'button', ...props };
 
@@ -23,8 +16,10 @@ const Button = ({
 
   const variantClasses = {
     primary: 'bg-primary text-on-primary-container hover:bg-primary-container',
-    secondary: 'bg-surface-container-high text-on-surface hover:bg-surface-bright hover:text-primary',
-    ghost: 'bg-transparent text-on-surface-variant hover:bg-surface-container-lowest/10 hover:text-primary',
+    secondary:
+      'bg-surface-container-high text-on-surface hover:bg-surface-bright hover:text-primary',
+    ghost:
+      'bg-transparent text-on-surface-variant hover:bg-surface-container-lowest/10 hover:text-primary',
   };
 
   return (

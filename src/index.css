@@ -1,6 +1,6 @@
 /* Fuentes: si ya las cargás desde index.html, podés borrar este @import */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Geist:wght@400..700&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /*
  * Design tokens (Stitch) definidos directamente para Tailwind v4.
@@ -157,6 +157,10 @@
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     font-feature-settings: 'liga';
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
   }
 }
