@@ -1,6 +1,6 @@
 import zirconiaCrownImage from '../assets/zirconia-crown.webp';
 
-export const EMAIL_GENERAL = 'consultas@akpdentallab.com';
+export const EMAIL_GENERAL = 'akpdentalab@gmail.com';
 export const EMAIL_LAB = 'lab@akpdentallab.com';
 export const EMAIL_CASES = 'casos@akpdentallab.com';
 
