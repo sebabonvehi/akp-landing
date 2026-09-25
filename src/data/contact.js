@@ -105,7 +105,7 @@ export const FORM_FIELDS = {
   },
   message: {
     label: 'Mensaje',
-    hint: 'Material, color, piezas y fecha deseada',
+    hint: 'Piezas, material, color y fecha',
     placeholder:
       'Describa el caso: piezas involucradas, material preferido, color (VITA), archivos disponibles y fecha deseada de entrega.',
   },
@@ -117,16 +117,37 @@ export const FORM_FIELDS = {
 };
 
 export const FORM_COPY = {
-  submit: 'Enviar consulta por email',
-  submitting: 'Procesando…',
-  security: 'Sus datos solo se usan para responder la consulta',
-  successTitle: 'Consulta preparada',
-  successMessage: 'Le responderemos a la brevedad dentro del horario de atención.',
+  submitEmail: 'Enviar por email',
+  submitWhatsApp: 'Enviar por WhatsApp',
+  privacy: 'Sus datos solo se usan para responder la consulta',
+  attachments: `Los archivos STL, PLY u OBJ y las fotos no se adjuntan desde aquí: envíelos por WeTransfer o Google Drive a ${EMAIL_CASES}.`,
+  sentEmail:
+    'Se abrió su cliente de correo con la consulta lista. Revise el mensaje y presione Enviar para completarlo.',
+  sentWhatsApp:
+    'Se abrió WhatsApp con la consulta lista. Revise el mensaje y envíelo para completarlo.',
+  invalid: 'Revise los campos marcados antes de enviar.',
+};
+
+export const VALIDATION_MESSAGES = {
+  required: 'Este campo es obligatorio.',
+  email: 'Ingrese un email válido, por ejemplo nombre@dominio.com.',
+  phone: 'Ingrese un teléfono válido, por ejemplo +54 9 11 1234-5678.',
+};
+
+export const INQUIRY_LABELS = {
+  subjectPrefix: 'Consulta web -',
+  doctorName: 'Profesional',
+  clinicName: 'Clínica / consultorio',
+  email: 'Email',
+  phone: 'Teléfono',
+  specialty: 'Tipo de consulta',
+  guideRequest: 'Solicito también la guía de preparación y tarifas en PDF.',
 };
 
 export const CONVERSION_STRIP = {
   title: '¿Tiene un caso en marcha hoy?',
   description: `Escríbanos a ${EMAIL_GENERAL} o por WhatsApp al ${PHONE_DISPLAY} para coordinar los tiempos.`,
   cta: 'Escribir por email',
+  whatsappCta: 'Escribir por WhatsApp',
   href: `mailto:${EMAIL_GENERAL}?subject=${encodeURIComponent('Consulta urgente - caso clínico')}`,
 };
