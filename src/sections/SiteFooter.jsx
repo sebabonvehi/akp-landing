@@ -17,7 +17,14 @@ export function SiteFooter() {
       <div className="container-page">
         <div className="mb-10 grid gap-8 sm:grid-cols-2 lg:mb-16 lg:grid-cols-4 lg:gap-gutter">
           <div>
-            <img src={BRAND_LOGO} alt={BRAND_NAME} className="brand-logo mb-4 h-20" loading="lazy" />
+            <img
+              src={BRAND_LOGO}
+              alt={BRAND_NAME}
+              width={324}
+              height={160}
+              className="brand-logo mb-4 h-20"
+              loading="lazy"
+            />
             <p className="body-sm mb-4">{FOOTER_ABOUT}</p>
             <ul className="flex flex-wrap gap-1">
               {FOOTER_BADGES.map((badge) => (
