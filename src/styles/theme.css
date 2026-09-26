@@ -1,3 +1,30 @@
+/* Metric-matched local fallbacks so swapping in the web fonts does not shift layout (CLS).
+   Values computed from @capsizecss/metrics. */
+@font-face {
+  font-family: 'EB Garamond Fallback';
+  src: local('Times New Roman');
+  size-adjust: 94.77%;
+  ascent-override: 106.26%;
+  descent-override: 31.44%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Hanken Grotesk Fallback';
+  src: local('Arial');
+  size-adjust: 100.94%;
+  ascent-override: 99.07%;
+  descent-override: 30.02%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local('Arial');
+  size-adjust: 104.76%;
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0%;
+}
+
 /* Tokens mapped from DESIGN.md: front-matter (Material names) plus prose values. */
 @theme {
   --color-background: #121316;
@@ -69,9 +96,9 @@
   --color-danger: #c24141;
   --color-scan: #6495ed;
 
-  --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
-  --font-label: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'EB Garamond', 'EB Garamond Fallback', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Hanken Grotesk', 'Hanken Grotesk Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-label: 'Geist', 'Geist Fallback', ui-sans-serif, system-ui, sans-serif;
 
   --text-display-lg: 56px;
   --text-display-lg--line-height: 64px;
