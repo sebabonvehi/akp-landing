@@ -1,12 +1,11 @@
 import { Button } from '../components/Button.jsx';
 import { Icon } from '../components/Icon.jsx';
-import { BRAND_MONOGRAM, BRAND_NAME, BRAND_TAGLINE } from '../data/brand.js';
+import { BRAND_LOGO, BRAND_NAME, BRAND_TAGLINE } from '../data/brand.js';
 import {
   HEADER_CTA,
   MENU_LABELS,
   NAV_LABEL,
   NAV_LINKS,
-  SKIP_LINK_LABEL,
 } from '../data/navigation.js';
 import { useMobileMenu } from '../hooks/useMobileMenu.js';
 
@@ -17,19 +16,11 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <a href="#content" className="skip-link">
-        {SKIP_LINK_LABEL}
-      </a>
 
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
         <a href="#content" className="flex min-w-0 items-center gap-3">
-          <span className="wordmark" aria-hidden="true">
-            {BRAND_MONOGRAM}
-          </span>
-          <span className="flex flex-col">
-            <span className="brand-name">{BRAND_NAME}</span>
-            <span className="caption hidden text-on-surface lg:block">{BRAND_TAGLINE}</span>
-          </span>
+          <img src={BRAND_LOGO} alt={BRAND_NAME} className="brand-logo h-12 md:h-16" />
+          <span className="sr-only">{BRAND_TAGLINE}</span>
         </a>
 
         <nav aria-label={NAV_LABEL} className="hidden items-center gap-2 md:flex">
