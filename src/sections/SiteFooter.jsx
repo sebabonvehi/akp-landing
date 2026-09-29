@@ -20,7 +20,7 @@ export function SiteFooter() {
             <img
               src={BRAND_LOGO}
               alt={BRAND_NAME}
-              width={324}
+              width={182}
               height={160}
               className="brand-logo mb-4 h-20"
               loading="lazy"
