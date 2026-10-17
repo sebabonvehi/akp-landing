@@ -31,9 +31,8 @@ secciones.
 
 ## Orden de la página
 
-`SiteHeader` → `StatusBarSection` → `HeroSection` → `ServicesSection` → `AboutSection` →
-`ContactSection` (`ContactForm` + `ContactAside`) → `ValuePropsSection` → `FaqSection` →
-`ConversionSection` → `SiteFooter`.
+`SiteHeader` → `ServicesSection` → `AboutSection` →
+`ContactSection` (`ContactForm` + `ContactAside`) → `FaqSection` → `SiteFooter`.
 
 La navegación es por anclas (`#contacto`, etc.) definidas en `data/navigation.js`.
 `SiteHeader` usa `useMobileMenu` (abre/cierra, cierra con Escape).

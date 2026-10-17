@@ -1,19 +1,17 @@
-import { BUSINESS_HOURS, EMAIL_CASES, PHONE_DISPLAY, PHONE_URL } from './contact.js';
-
-export const FOOTER_ABOUT =
-  'Laboratorio dental digital. Restauraciones protésicas diseñadas y fabricadas con flujo CAD/CAM.';
-
-export const FOOTER_BADGES = ['ISO 13485:2016', 'Biocompatible CE', 'Fresado 5 ejes'];
+import {
+  BUSINESS_HOURS,
+  EMAIL_CASES,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+  PHONE_DISPLAY,
+  PHONE_URL,
+  SATURDAY_HOURS,
+} from './contact.js';
 
 export const FILE_FORMATS = {
   title: 'Formatos y archivos',
-  description: 'Recibimos escaneos intraorales y de mesa:',
-  items: [
-    'STL',
-    'PLY con textura y color',
-    'OBJ',
-    'Exportaciones de iTero, 3Shape, Medit y Primescan',
-  ],
+  description: 'Recibimos escaneos y modelos analógicos:',
+  items: ['STL', 'PLY con textura y color'],
 };
 
 export const FOOTER_CONTACT = {
@@ -26,7 +24,12 @@ export const FOOTER_CONTACT = {
       value: PHONE_DISPLAY,
       href: PHONE_URL,
     },
-    { id: 'hours', icon: 'schedule', label: 'Horario de atención', value: BUSINESS_HOURS },
+    {
+      id: 'hours',
+      icon: 'schedule',
+      label: 'Horario de atención',
+      value: [BUSINESS_HOURS, SATURDAY_HOURS],
+    },
     {
       id: 'cases',
       icon: 'mail',
@@ -34,13 +37,14 @@ export const FOOTER_CONTACT = {
       value: EMAIL_CASES,
       href: `mailto:${EMAIL_CASES}`,
     },
+    {
+      id: 'instagram',
+      icon: 'instagram',
+      label: 'Instagram',
+      value: INSTAGRAM_HANDLE,
+      href: INSTAGRAM_URL,
+    },
   ],
 };
 
-export const FOOTER_HIGHLIGHT = {
-  title: 'Cobertura',
-  description:
-    'Trabajamos con profesionales de cualquier lugar: los casos se reciben en formato digital por email.'
-};
-
-export const FOOTER_LEGAL = 'AKP Digital Dental Lab. Todos los derechos reservados.';
+export const FOOTER_LEGAL = 'AKP Laboratorio dental digital. Todos los derechos reservados.';

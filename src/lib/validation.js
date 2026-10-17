@@ -1,7 +1,7 @@
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const PHONE_PATTERN = /^\+?[\d\s()-]{8,20}$/;
 
-export const REQUIRED_FIELDS = ['doctorName', 'clinicName', 'email', 'subject', 'message'];
+export const REQUIRED_FIELDS = ['doctorName', 'clinicName', 'email', 'phone', 'subject', 'message'];
 
 export function isValidEmail(value) {
   return EMAIL_PATTERN.test(value.trim());
@@ -19,7 +19,7 @@ export function validateInquiry(values, messages) {
   }
 
   if (!errors.email && !isValidEmail(values.email)) errors.email = messages.email;
-  if (values.phone.trim() && !isValidPhone(values.phone)) errors.phone = messages.phone;
+  if (!errors.phone && !isValidPhone(values.phone)) errors.phone = messages.phone;
 
   return errors;
 }

@@ -27,27 +27,27 @@
 
 /* Tokens mapped from DESIGN.md: front-matter (Material names) plus prose values. */
 @theme {
-  --color-background: #00263a;
-  --color-on-background: #e6eef2;
+  --color-background: #b9d9eb;
+  --color-on-background: #00263a;
 
-  --color-surface: #00263a;
-  --color-surface-dim: #00263a;
-  --color-surface-bright: #0f4a68;
-  --color-surface-variant: #0a3a55;
+  --color-surface: #b9d9eb;
+  --color-surface-dim: #b9d9eb;
+  --color-surface-bright: #dcecf5;
+  --color-surface-variant: #a9cfe4;
   --color-surface-tint: #4fa8db;
-  --color-surface-container-lowest: #00131d;
-  --color-surface-container-low: #001f30;
-  --color-surface-container: #032c42;
-  --color-surface-container-high: #06314a;
-  --color-surface-container-highest: #0a3a55;
+  --color-surface-container-lowest: #b9d9eb;
+  --color-surface-container-low: #b9d9eb;
+  --color-surface-container: #b9d9eb;
+  --color-surface-container-high: #a9cfe4;
+  --color-surface-container-highest: #a9cfe4;
 
-  --color-on-surface: #e6eef2;
-  --color-on-surface-variant: #d0d0ce;
+  --color-on-surface: #00263a;
+  --color-on-surface-variant: #00263a;
   --color-inverse-surface: #e6eef2;
   --color-inverse-on-surface: #00263a;
 
-  --color-outline: #8fa3ae;
-  --color-outline-variant: #1d4a63;
+  --color-outline: #2d5268;
+  --color-outline-variant: #6f9bb3;
 
   --color-primary: #4fa8db;
   --color-on-primary: #00131d;
@@ -77,23 +77,23 @@
   --color-on-tertiary-fixed: #00131d;
   --color-on-tertiary-fixed-variant: #00263a;
 
-  --color-error: #ffb4ab;
+  --color-error: #b3261e;
   --color-on-error: #690005;
   --color-error-container: #93000a;
   --color-on-error-container: #ffdad6;
 
-  --color-canvas: #00131d;
-  --color-surface-hover: #06314a;
-  --color-surface-modal: #0a3a55;
-  --color-surface-button: #032c42;
-  --color-input: #001b29;
-  --color-gold: #4fa8db;
-  --color-champagne: #b9d9eb;
-  --color-bronze: #0085ca;
-  --color-border-gold: rgb(41 143 194 / 0.25);
-  --color-success: #78b159;
+  --color-canvas: #b9d9eb;
+  --color-surface-hover: #a9cfe4;
+  --color-surface-modal: #dcecf5;
+  --color-surface-button: #dcecf5;
+  --color-input: #dcecf5;
+  --color-gold: #00263a;
+  --color-champagne: #00263a;
+  --color-bronze: #003a57;
+  --color-border-gold: rgb(0 38 58 / 0.35);
+  --color-success: #2e6b1f;
   --color-warning: #e08a4f;
-  --color-danger: #f07878;
+  --color-danger: #b3261e;
   --color-scan: #298fc2;
   --color-pearl: #d0d0ce;
 
@@ -171,6 +171,6 @@
   --spacing-space-lg: 1.5rem;
   --spacing-space-xl: 2.5rem;
 
-  --shadow-level-2: 0 8px 32px rgb(0 0 0 / 0.65), 0 0 16px rgb(41 143 194 / 0.05);
-  --shadow-focus-gold: 0 0 8px rgb(41 143 194 / 0.2);
+  --shadow-level-2: 0 8px 24px rgb(0 38 58 / 0.15);
+  --shadow-focus-gold: 0 0 8px rgb(0 38 58 / 0.25);
 }

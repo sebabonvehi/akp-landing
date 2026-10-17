@@ -1,12 +1,6 @@
 import { useState } from 'react';
 
-import {
-  EMAIL_GENERAL,
-  INQUIRY_LABELS,
-  PHONE_E164,
-  SPECIALTIES,
-  VALIDATION_MESSAGES,
-} from '../data/contact.js';
+import { EMAIL_GENERAL, INQUIRY_LABELS, PHONE_E164, VALIDATION_MESSAGES } from '../data/contact.js';
 import {
   buildInquiry,
   buildMailtoUrl,
@@ -22,15 +16,9 @@ const INITIAL_VALUES = {
   clinicName: '',
   email: '',
   phone: '',
-  specialty: SPECIALTIES[0].id,
   subject: '',
   message: '',
-  sendGuide: false,
 };
-
-function findSpecialtyLabel(id) {
-  return SPECIALTIES.find((specialty) => specialty.id === id)?.label ?? '';
-}
 
 function openChannel(channel, { subject, body }) {
   if (channel === SEND_CHANNEL.whatsapp) {
@@ -55,13 +43,9 @@ export function useContactForm() {
   const [sentChannel, setSentChannel] = useState(null);
 
   function handleChange(event) {
-    const { name, value, type, checked } = event.target;
-    setValues((previous) => ({ ...previous, [name]: type === 'checkbox' ? checked : value }));
+    const { name, value } = event.target;
+    setValues((previous) => ({ ...previous, [name]: value }));
     if (errors[name]) setErrors((previous) => ({ ...previous, [name]: undefined }));
-  }
-
-  function handleSpecialtySelect(specialty) {
-    setValues((previous) => ({ ...previous, specialty }));
   }
 
   function send(channel) {
@@ -75,15 +59,12 @@ export function useContactForm() {
       return;
     }
 
-    const inquiry = buildInquiry(values, {
-      labels: INQUIRY_LABELS,
-      specialtyLabel: findSpecialtyLabel(values.specialty),
-    });
+    const inquiry = buildInquiry(values, INQUIRY_LABELS);
     openChannel(channel, inquiry);
     setSentChannel(channel);
   }
 
   const hasErrors = Object.values(errors).some(Boolean);
 
-  return { values, errors, hasErrors, sentChannel, handleChange, handleSpecialtySelect, send };
+  return { values, errors, hasErrors, sentChannel, handleChange, send };
 }

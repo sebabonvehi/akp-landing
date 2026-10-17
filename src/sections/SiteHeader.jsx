@@ -16,9 +16,9 @@ export function SiteHeader() {
           <img
             src={BRAND_LOGO}
             alt={BRAND_NAME}
-            width={182}
-            height={160}
-            className="brand-logo h-12 md:h-16"
+            width={759}
+            height={201}
+            className="brand-logo h-10 md:h-14"
           />
           <span className="sr-only">{BRAND_TAGLINE}</span>
         </a>

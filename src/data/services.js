@@ -1,11 +1,8 @@
 export const SERVICES_HEADING = {
-  eyebrow: 'Servicios y materiales',
-  title: 'Qué fabricamos y con qué materiales',
+  title: 'MATERIALES Y SERVICIOS',
   description:
-    'Cada caso se diseña de forma digital y se fabrica con el material indicado para su función y su estética.',
+    'Nuestro laboratorio dental cuenta con un sistema CAD/CAM de última generación, que nos permite ofrecer una amplia variedad de materiales y servicios para la fabricación de restauraciones dentales de alta calidad. Trabajamos con materiales cerámicos, polímeros y resinas, adaptándonos a las necesidades de cada paciente y profesional.',
 };
-
-export const INDICATIONS_LABEL = 'Indicaciones';
 
 export const SERVICES = [
   {
@@ -14,11 +11,7 @@ export const SERVICES = [
     name: 'Zirconio',
     description:
       'Material cerámico de alta resistencia a la fractura, fresado a partir de discos presinterizados y sinterizado en horno. Puede trabajarse monolítico o con estratificación cerámica.',
-    indications: [
-      'Coronas y puentes',
-      'Sector posterior y anterior',
-      'Estructuras sobre implantes',
-    ],
+    indications: ['Coronas', 'Puentes', 'Férulas'],
   },
   {
     id: 'lithium-disilicate',
@@ -26,12 +19,7 @@ export const SERVICES = [
     name: 'Disilicato de litio',
     description:
       'Vitrocerámica con muy buena translucidez y resistencia, adecuada cuando la estética es prioritaria. Permite cementado adhesivo.',
-    indications: [
-      'Coronas unitarias',
-      'Carillas',
-      'Incrustaciones (inlays / onlays)',
-      'Sector anterior',
-    ],
+    indications: ['Coronas', 'Carillas', 'Incrustaciones (inlays / onlays)', 'Endocoronas'],
   },
   {
     id: 'pmma',
@@ -41,6 +29,8 @@ export const SERVICES = [
     indications: [
       'Provisorios de corta y mediana duración',
       'Prototipos para probar forma y función antes de la restauración definitiva',
+      'Férulas',
+      'Placas miorrelajantes',
     ],
   },
   {
@@ -48,7 +38,7 @@ export const SERVICES = [
     icon: 'shield',
     name: 'Placas miorrelajantes',
     description:
-      'Férulas oclusales diseñadas digitalmente a partir del escaneo o modelo, fabricadas en material rígido.',
+      'Férulas oclusales diseñadas digitalmente a partir del escaneo o modelo, impresas o fresadas en material rígido.',
     indications: [
       'Bruxismo',
       'Protección de restauraciones',
@@ -61,21 +51,18 @@ export const SERVICES = [
     name: 'Impresiones 3D',
     description: 'Fabricación aditiva en resinas a partir de archivos digitales.',
     indications: [
-      'Modelos de trabajo y de estudio',
       'Guías quirúrgicas',
-      'Maquetas y piezas auxiliares',
+      'Maquetas (Mock-up)',
+      'Modelos parciales y completos',
+      'Restauraciones definitivas (Bioceramic)',
+      'Restauraciones provisorias',
     ],
   },
-];
-
-export const PRODUCTS_HEADING = 'Productos';
-
-export const PRODUCTS = [
   {
-    id: 'crowns',
-    name: 'Coronas',
-    materials: 'Zirconio, disilicato de litio, PMMA provisorio',
+    id: 'others',
+    icon: 'more_horiz',
+    name: 'Otros',
+    description: 'Servicios complementarios de nuestro laboratorio dental.',
+    indications: ['Realizamos vaciados', 'Escaneos de modelos analógicos'],
   },
-  { id: 'bridges', name: 'Puentes', materials: 'Zirconio, PMMA provisorio' },
-  { id: 'splints', name: 'Férulas', materials: 'Placas miorrelajantes' },
 ];

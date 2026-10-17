@@ -2,9 +2,8 @@ import { Button } from '../components/Button.jsx';
 import { Icon } from '../components/Icon.jsx';
 import { Input } from '../components/Input.jsx';
 import { Textarea } from '../components/Textarea.jsx';
-import { FORM_COPY, FORM_FIELDS, SPECIALTIES } from '../data/contact.js';
+import { FORM_COPY, FORM_FIELDS } from '../data/contact.js';
 import { SEND_CHANNEL, useContactForm } from '../hooks/useContactForm.js';
-import { SpecialtyPills } from './SpecialtyPills.jsx';
 
 const SENT_MESSAGE = {
   [SEND_CHANNEL.email]: FORM_COPY.sentEmail,
@@ -45,33 +44,11 @@ export function ContactForm() {
 
       <div className="form-row">
         <Input required type="email" autoComplete="email" {...fieldProps('email')} />
-        <Input type="tel" autoComplete="tel" {...fieldProps('phone')} />
+        <Input required type="tel" autoComplete="tel" {...fieldProps('phone')} />
       </div>
-
-      <SpecialtyPills
-        label={FORM_FIELDS.specialty.label}
-        options={SPECIALTIES}
-        selectedId={values.specialty}
-        onSelect={form.handleSpecialtySelect}
-      />
 
       <Input required {...fieldProps('subject')} />
       <Textarea required {...fieldProps('message')} />
-
-      <label className="checkbox-row">
-        <input
-          type="checkbox"
-          name="sendGuide"
-          checked={values.sendGuide}
-          onChange={form.handleChange}
-          className="checkbox"
-        />
-        <span>
-          {FORM_FIELDS.sendGuide.labelStart}{' '}
-          <strong className="font-medium text-gold">{FORM_FIELDS.sendGuide.labelHighlight}</strong>{' '}
-          {FORM_FIELDS.sendGuide.labelEnd}
-        </span>
-      </label>
 
       <p className="body-sm flex items-start gap-2">
         <Icon name="drive_folder_upload" size="sm" className="mt-0.5 text-gold" />

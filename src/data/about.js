@@ -1,6 +1,5 @@
 export const ABOUT_HEADING = {
-  eyebrow: 'Quiénes somos',
-  title: 'Un laboratorio dental digital, cerca del profesional',
+  title: 'NOSOTROS',
 };
 
 export const ABOUT_PARAGRAPHS = [
@@ -17,8 +16,3 @@ export const ABOUT_PARAGRAPHS = [
     text: 'Creemos que un buen resultado empieza antes del fresado: por eso revisamos cada caso junto al profesional, consultamos lo que haga falta y acordamos los detalles antes de avanzar.',
   },
 ];
-
-export const ABOUT_AUDIENCE = {
-  label: 'Trabajamos con',
-  items: ['Odontólogos', 'Prostodoncistas', 'Clínicas', 'Protesistas'],
-};

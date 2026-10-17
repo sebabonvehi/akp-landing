@@ -3,20 +3,16 @@ export const MAX_URL_LENGTH = 2000;
 
 const TRUNCATION_MARKER = '…';
 
-export function buildInquiry(values, { labels, specialtyLabel }) {
+export function buildInquiry(values, labels) {
   const subject = `${labels.subjectPrefix} ${values.subject.trim()}`;
   const details = [
     `${labels.doctorName}: ${values.doctorName.trim()}`,
     `${labels.clinicName}: ${values.clinicName.trim()}`,
     `${labels.email}: ${values.email.trim()}`,
+    `${labels.phone}: ${values.phone.trim()}`,
   ];
-  if (values.phone.trim()) details.push(`${labels.phone}: ${values.phone.trim()}`);
-  details.push(`${labels.specialty}: ${specialtyLabel}`);
 
-  const sections = [details.join('\n'), values.message.trim()];
-  if (values.sendGuide) sections.push(labels.guideRequest);
-
-  return { subject, body: sections.join('\n\n') };
+  return { subject, body: `${details.join('\n')}\n\n${values.message.trim()}` };
 }
 
 export function buildMailtoUrl({ to, subject, body }) {

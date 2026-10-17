@@ -1,5 +1,3 @@
-import zirconiaCrownImage from '../assets/zirconia-crown.webp';
-
 export const EMAIL_GENERAL = 'akpdentalab@gmail.com';
 export const EMAIL_LAB = 'akpdentalab@gmail.com';
 export const EMAIL_CASES = 'akpdentalab@gmail.com';
@@ -9,18 +7,21 @@ export const PHONE_DISPLAY = '+54 9 11 3512-5178';
 export const PHONE_URL = `tel:${PHONE_E164}`;
 export const WHATSAPP_URL = `https://wa.me/${PHONE_E164.replace('+', '')}`;
 
-export const BUSINESS_HOURS = 'Lun a Vie · 08:00–17:00 (ART)';
+export const INSTAGRAM_HANDLE = '@akpdentalab';
+export const INSTAGRAM_URL = 'https://www.instagram.com/akpdentalab/';
+
+export const BUSINESS_HOURS = 'Lun a Vie · 08:00–17:00 (ARG)';
+export const SATURDAY_HOURS = 'Sáb · 08:00–13:00 (ARG)';
 
 export const CONTACT_HEADING = {
-  eyebrow: 'Admisión clínica digital',
   title: 'Consulte su caso por email o WhatsApp',
   description:
     'Complete los datos de su caso. El equipo técnico del laboratorio los revisa antes de responderle con una valoración y un presupuesto.',
 };
 
 export const CONTACT_CHANNELS = {
-  eyebrow: 'Canales directos',
-  title: 'Atención por email y WhatsApp',
+  eyebrow: 'Contacto',
+  title: 'Atención por email, WhatsApp e Instagram',
   description:
     'Si ya tiene su orden de trabajo o prefiere escribirnos desde su propio correo o teléfono:',
   hoursLabel: 'Horario de atención',
@@ -33,50 +34,21 @@ export const CONTACT_CHANNELS = {
       icon: 'mail',
     },
     {
-      id: 'lab',
-      label: 'Dirección técnica y CAD/CAM',
-      value: EMAIL_LAB,
-      href: `mailto:${EMAIL_LAB}`,
-      icon: 'manage_accounts',
-    },
-    {
       id: 'whatsapp',
       label: 'WhatsApp',
       value: PHONE_DISPLAY,
       href: WHATSAPP_URL,
       icon: 'chat',
     },
+    {
+      id: 'instagram',
+      label: 'Instagram',
+      value: INSTAGRAM_HANDLE,
+      href: INSTAGRAM_URL,
+      icon: 'instagram',
+    },
   ],
 };
-
-export const LARGE_FILES = {
-  title: '¿Archivos STL, PLY u OBJ pesados?',
-  description:
-    'Puede enviar sus escaneos intraorales por WeTransfer, Dropbox o Google Drive a nuestro email de casos:',
-  email: EMAIL_CASES,
-  quote:
-    'Revisamos cada caso junto al profesional y acordamos los detalles antes de avanzar con el diseño.',
-};
-
-export const CONTACT_IMAGE = {
-  src: zirconiaCrownImage,
-  width: 512,
-  height: 279,
-  alt: 'Corona sobre soporte en la mesa de trabajo del laboratorio',
-  tag: 'Estructuras de zirconio',
-  caption: 'Diseño CAD/CAM',
-};
-
-export const SPECIALTIES = [
-  { id: 'zirconia', label: 'Zirconio' },
-  { id: 'lithium-disilicate', label: 'Disilicato de litio' },
-  { id: 'pmma', label: 'PMMA' },
-  { id: 'splints', label: 'Placas miorrelajantes' },
-  { id: '3d-printing', label: 'Impresiones 3D' },
-  { id: 'cad-design', label: 'Diseño CAD/CAM' },
-  { id: 'price-list', label: 'Tarifas' },
-  { id: 'other', label: 'Otra consulta' },
-];
 
 export const FORM_FIELDS = {
   doctorName: {
@@ -91,31 +63,22 @@ export const FORM_FIELDS = {
   },
   email: {
     label: 'Email de contacto',
-    hint: 'Donde le respondemos',
     placeholder: 'dra.lopez@consultorio.com.ar',
     icon: 'mail',
   },
   phone: {
     label: 'Teléfono / WhatsApp',
-    hint: 'Opcional',
     placeholder: '+54 9 11 1234-5678',
     icon: 'chat',
   },
-  specialty: { label: 'Tipo de consulta o servicio' },
   subject: {
     label: 'Asunto del caso',
     placeholder: 'Ej. Coronas de zirconio en 14 y 15',
   },
   message: {
     label: 'Mensaje',
-    hint: 'Piezas, material, color y fecha',
     placeholder:
       'Describa el caso: piezas involucradas, material preferido, color (VITA), archivos disponibles y fecha deseada de entrega.',
-  },
-  sendGuide: {
-    labelStart: 'Quiero recibir también la',
-    labelHighlight: 'Guía de preparación y tarifas',
-    labelEnd: 'en PDF por email.',
   },
 };
 
@@ -123,7 +86,7 @@ export const FORM_COPY = {
   submitEmail: 'Enviar por email',
   submitWhatsApp: 'Enviar por WhatsApp',
   privacy: 'Sus datos solo se usan para responder la consulta',
-  attachments: `Los archivos STL, PLY u OBJ y las fotos no se adjuntan desde aquí: envíelos por WeTransfer o Google Drive a ${EMAIL_CASES}.`,
+  attachments: `Envie los archivos STL y PLY por WeTransfer a ${EMAIL_CASES} y las imagenes por email o WhatsApp`,
   sentEmail:
     'Se abrió su cliente de correo con la consulta lista. Revise el mensaje y presione Enviar para completarlo.',
   sentWhatsApp:
@@ -143,14 +106,4 @@ export const INQUIRY_LABELS = {
   clinicName: 'Clínica / consultorio',
   email: 'Email',
   phone: 'Teléfono',
-  specialty: 'Tipo de consulta',
-  guideRequest: 'Solicito también la guía de preparación y tarifas en PDF.',
-};
-
-export const CONVERSION_STRIP = {
-  title: '¿Tiene un caso en marcha hoy?',
-  description: `Escríbanos a ${EMAIL_GENERAL} o por WhatsApp al ${PHONE_DISPLAY} para coordinar los tiempos.`,
-  cta: 'Escribir por email',
-  whatsappCta: 'Escribir por WhatsApp',
-  href: `mailto:${EMAIL_GENERAL}?subject=${encodeURIComponent('Consulta urgente - caso clínico')}`,
 };

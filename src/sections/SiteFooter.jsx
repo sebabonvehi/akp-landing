@@ -1,13 +1,8 @@
 import { Icon } from '../components/Icon.jsx';
+import { InstagramIcon } from '../components/InstagramIcon.jsx';
 import { BRAND_LOGO, BRAND_NAME } from '../data/brand.js';
-import {
-  FILE_FORMATS,
-  FOOTER_ABOUT,
-  FOOTER_BADGES,
-  FOOTER_CONTACT,
-  FOOTER_HIGHLIGHT,
-  FOOTER_LEGAL,
-} from '../data/footer.js';
+import { FILE_FORMATS, FOOTER_CONTACT, FOOTER_LEGAL } from '../data/footer.js';
+import { externalLinkProps } from '../lib/externalLinkProps.js';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -20,19 +15,11 @@ export function SiteFooter() {
             <img
               src={BRAND_LOGO}
               alt={BRAND_NAME}
-              width={182}
-              height={160}
-              className="brand-logo mb-4 h-20"
+              width={759}
+              height={201}
+              className="brand-logo mb-4 h-14"
               loading="lazy"
             />
-            <p className="body-sm mb-4">{FOOTER_ABOUT}</p>
-            <ul className="flex flex-wrap gap-1">
-              {FOOTER_BADGES.map((badge) => (
-                <li key={badge} className="badge">
-                  {badge}
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div>
@@ -53,29 +40,32 @@ export function SiteFooter() {
             <ul className="flex flex-col gap-2">
               {FOOTER_CONTACT.items.map((item) => (
                 <li key={item.id} className="flex items-start gap-2">
-                  <Icon name={item.icon} className="text-champagne" />
+                  {item.icon === 'instagram' ? (
+                    <InstagramIcon className="text-champagne" />
+                  ) : (
+                    <Icon name={item.icon} className="text-champagne" />
+                  )}
                   <span>
                     <span className="caption block text-on-surface">{item.label}</span>
                     {item.href ? (
-                      <a href={item.href} className="body-sm hover:text-gold">
+                      <a
+                        href={item.href}
+                        className="body-sm hover:text-gold"
+                        {...externalLinkProps(item.href)}
+                      >
                         {item.value}
                       </a>
                     ) : (
-                      <span className="body-sm">{item.value}</span>
+                      [item.value].flat().map((line) => (
+                        <span key={line} className="body-sm block">
+                          {line}
+                        </span>
+                      ))
                     )}
                   </span>
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div>
-            <h3 className="eyebrow mb-4">{FOOTER_HIGHLIGHT.title}</h3>
-            <p className="body-sm mb-2">{FOOTER_HIGHLIGHT.description}</p>
-            <div className="inset-box">
-              <span className="caption block text-champagne">{FOOTER_HIGHLIGHT.label}</span>
-              <span className="body-sm block text-on-surface">{FOOTER_HIGHLIGHT.value}</span>
-            </div>
           </div>
         </div>
 
