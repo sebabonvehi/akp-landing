@@ -27,7 +27,7 @@
   }
 
   .btn-secondary {
-    @apply border border-gold/40 bg-surface-button text-champagne hover:bg-surface-hover;
+    @apply border border-gold/40 bg-pearl-dim text-champagne hover:bg-pearl-deep;
   }
 
   .btn-ghost {
