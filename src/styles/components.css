@@ -52,7 +52,7 @@
   }
 
   .card {
-    @apply rounded border border-border-gold bg-surface p-space-lg;
+    @apply rounded border border-border-gold bg-pearl p-space-lg;
   }
 
   .chip,
@@ -193,7 +193,7 @@
   }
 
   .faq-item {
-    @apply rounded border border-border-gold bg-surface px-4;
+    @apply rounded border border-border-gold bg-pearl px-4;
   }
 
   .faq-question {
