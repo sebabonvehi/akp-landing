@@ -35,7 +35,7 @@
   }
 
   .input-field {
-    @apply w-full rounded border border-bronze/35 bg-input px-3 py-2 font-sans text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/60;
+    @apply w-full rounded border border-bronze/35 bg-pearl-dim px-3 py-2 font-sans text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/60;
     @apply focus:border-gold focus:shadow-focus-gold focus:outline-none aria-invalid:border-danger;
   }
 
@@ -93,11 +93,11 @@
   }
 
   .card-interactive {
-    @apply flex h-full flex-col gap-2 transition-colors hover:bg-surface-hover;
+    @apply flex h-full flex-col gap-2 transition-colors hover:bg-pearl-dim;
   }
 
   .inset-box {
-    @apply flex flex-col rounded-sm bg-canvas p-2;
+    @apply flex flex-col rounded-sm bg-pearl-dim p-2;
   }
 
   .text-link {
@@ -105,7 +105,7 @@
   }
 
   .icon-box {
-    @apply mb-1 flex size-10 items-center justify-center rounded bg-surface-hover text-gold;
+    @apply mb-1 flex size-10 items-center justify-center rounded bg-pearl-dim text-gold;
   }
 
   .icon-box-solid {
