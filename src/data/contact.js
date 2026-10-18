@@ -10,6 +10,9 @@ export const WHATSAPP_URL = `https://wa.me/${PHONE_E164.replace('+', '')}`;
 export const INSTAGRAM_HANDLE = '@akpdentalab';
 export const INSTAGRAM_URL = 'https://www.instagram.com/akpdentalab/';
 
+export const LOCATION = 'Flores, CABA';
+export const LOCATION_URL = 'https://www.google.com/maps/search/?api=1&query=Flores%2C+CABA';
+
 export const BUSINESS_HOURS = 'Lun a Vie · 08:00–17:00 (ARG)';
 export const SATURDAY_HOURS = 'Sáb · 08:00–13:00 (ARG)';
 
@@ -46,6 +49,13 @@ export const CONTACT_CHANNELS = {
       value: INSTAGRAM_HANDLE,
       href: INSTAGRAM_URL,
       icon: 'instagram',
+    },
+    {
+      id: 'location',
+      label: 'Ubicación',
+      value: LOCATION,
+      href: LOCATION_URL,
+      icon: 'location_on',
     },
   ],
 };

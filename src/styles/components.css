@@ -8,7 +8,15 @@
   }
 
   .section-title {
-    @apply font-serif text-headline-sm text-on-surface md:text-headline-md;
+    @apply font-serif text-headline-md text-on-surface md:text-headline-lg;
+  }
+
+  .section-title::after {
+    @apply mt-3 block h-0.5 w-12 rounded bg-primary-container content-[""];
+  }
+
+  .text-center .section-title::after {
+    @apply mx-auto;
   }
 
   .eyebrow {
@@ -73,7 +81,7 @@
   }
 
   .section-description {
-    @apply max-w-2xl font-sans text-body-md text-on-surface-variant;
+    @apply max-w-2xl font-sans text-body-lg text-on-surface-variant;
   }
 
   .text-center .section-description {
@@ -86,6 +94,10 @@
 
   .body-sm {
     @apply font-sans text-body-sm text-on-surface-variant;
+  }
+
+  .body-md {
+    @apply font-sans text-body-md text-on-surface-variant;
   }
 
   .card-title {
@@ -133,7 +145,7 @@
   }
 
   .nav-link {
-    @apply px-2 py-1 font-label text-label-sm text-on-surface uppercase transition-colors hover:text-gold;
+    @apply px-2 py-1 font-label text-label-md text-on-surface uppercase transition-colors hover:text-gold md:text-label-lg;
   }
 
   .skip-link {

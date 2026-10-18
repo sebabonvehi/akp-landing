@@ -1,7 +1,7 @@
 import { Icon } from '../components/Icon.jsx';
 import { InstagramIcon } from '../components/InstagramIcon.jsx';
 import { BRAND_LOGO, BRAND_NAME } from '../data/brand.js';
-import { FILE_FORMATS, FOOTER_CONTACT, FOOTER_LEGAL } from '../data/footer.js';
+import { FILE_FORMATS, FOOTER_CONTACT, FOOTER_LEGAL, FOOTER_LOCATION } from '../data/footer.js';
 import { externalLinkProps } from '../lib/externalLinkProps.js';
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -24,7 +24,7 @@ export function SiteFooter() {
 
           <div>
             <h3 className="eyebrow mb-4">{FILE_FORMATS.title}</h3>
-            <p className="body-sm mb-4">{FILE_FORMATS.description}</p>
+            <p className="body-md mb-4">{FILE_FORMATS.description}</p>
             <ul className="flex flex-col gap-1">
               {FILE_FORMATS.items.map((item) => (
                 <li key={item} className="body-sm flex items-center gap-1.5">
@@ -66,6 +66,18 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div>
+            <h3 className="eyebrow mb-4">{FOOTER_LOCATION.title}</h3>
+            <a
+              href={FOOTER_LOCATION.href}
+              className="body-sm flex items-center gap-2 hover:text-gold"
+              {...externalLinkProps(FOOTER_LOCATION.href)}
+            >
+              <Icon name="location_on" className="text-champagne" />
+              {FOOTER_LOCATION.value}
+            </a>
           </div>
         </div>
 

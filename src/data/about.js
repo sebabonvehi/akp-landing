@@ -1,5 +1,5 @@
 export const ABOUT_HEADING = {
-  title: 'NOSOTROS',
+  title: 'Nosotros',
 };
 
 export const ABOUT_PARAGRAPHS = [

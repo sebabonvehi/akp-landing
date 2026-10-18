@@ -3,6 +3,8 @@ import {
   EMAIL_CASES,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
+  LOCATION,
+  LOCATION_URL,
   PHONE_DISPLAY,
   PHONE_URL,
   SATURDAY_HOURS,
@@ -45,6 +47,12 @@ export const FOOTER_CONTACT = {
       href: INSTAGRAM_URL,
     },
   ],
+};
+
+export const FOOTER_LOCATION = {
+  title: 'Ubicación',
+  value: LOCATION,
+  href: LOCATION_URL,
 };
 
 export const FOOTER_LEGAL = 'AKP Laboratorio dental digital. Todos los derechos reservados.';
