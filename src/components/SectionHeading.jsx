@@ -3,13 +3,20 @@ const ALIGN_CLASS = {
   center: 'section-heading text-center',
 };
 
-export function SectionHeading({ id, eyebrow, title, description = '', align = 'center' }) {
+export function SectionHeading({
+  id,
+  eyebrow,
+  title,
+  description = '',
+  align = 'center',
+  as: Heading = 'h2',
+}) {
   return (
     <div className={ALIGN_CLASS[align]}>
       <span className="eyebrow">{eyebrow}</span>
-      <h2 id={id} className="section-title">
+      <Heading id={id} className="section-title">
         {title}
-      </h2>
+      </Heading>
       {description && <p className="section-description">{description}</p>}
     </div>
   );

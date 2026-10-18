@@ -7,7 +7,7 @@ export function ServicesSection() {
   return (
     <section id="servicios" aria-labelledby="services-title" className="section bg-canvas">
       <div className="container-page flex flex-col gap-8">
-        <SectionHeading id="services-title" {...SERVICES_HEADING} />
+        <SectionHeading id="services-title" as="h1" {...SERVICES_HEADING} />
 
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service) => (
