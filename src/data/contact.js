@@ -95,6 +95,11 @@ export const FORM_FIELDS = {
     label: 'Asunto del caso',
     placeholder: 'Ej. Coronas de zirconio en 14 y 15',
   },
+  filesLink: {
+    label: 'Link a los archivos (opcional)',
+    placeholder: 'https://wetransfer.com/… o https://drive.google.com/…',
+    icon: 'cloud_upload',
+  },
   message: {
     label: 'Mensaje',
     placeholder:
@@ -106,7 +111,7 @@ export const FORM_COPY = {
   submitEmail: 'Enviar por email',
   submitWhatsApp: 'Enviar por WhatsApp',
   privacy: 'Sus datos solo se usan para responder la consulta',
-  attachments: `Envie los archivos STL y PLY por WeTransfer a ${EMAIL_CASES} y las imagenes por email o WhatsApp`,
+  attachments: `Suba los archivos STL, PLY u OBJ a WeTransfer o Google Drive y pegue el link arriba, o envíelos a ${EMAIL_CASES}.`,
   sendingEmail: 'Enviando consulta…',
   sentEmail: 'Consulta enviada. El laboratorio le responderá a la brevedad.',
   errorEmail: `No pudimos enviar la consulta. Intente de nuevo, use WhatsApp o escríbanos a ${EMAIL_GENERAL}.`,
@@ -119,6 +124,7 @@ export const VALIDATION_MESSAGES = {
   required: 'Este campo es obligatorio.',
   email: 'Ingrese un email válido, por ejemplo nombre@dominio.com.',
   phone: 'Ingrese un teléfono válido, por ejemplo +54 9 11 1234-5678.',
+  url: 'Ingrese un link válido que empiece con https://.',
 };
 
 export const INQUIRY_LABELS = {
@@ -127,4 +133,5 @@ export const INQUIRY_LABELS = {
   clinicName: 'Clínica / consultorio',
   email: 'Email',
   phone: 'Teléfono',
+  filesLink: 'Archivos',
 };

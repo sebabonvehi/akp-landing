@@ -11,6 +11,7 @@ export function buildInquiry(values, labels) {
     `${labels.email}: ${values.email.trim()}`,
     `${labels.phone}: ${values.phone.trim()}`,
   ];
+  if (values.filesLink.trim()) details.push(`${labels.filesLink}: ${values.filesLink.trim()}`);
 
   return { subject, body: `${details.join('\n')}\n\n${values.message.trim()}` };
 }

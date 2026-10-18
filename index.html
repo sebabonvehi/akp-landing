@@ -6,7 +6,7 @@
     <title>AKP Digital Dental Lab · Laboratorio dental digital CAD/CAM</title>
     <meta
       name="description"
-      content="Laboratorio dental digital CAD/CAM: coronas, puentes y férulas en zirconio, disilicato de litio y PMMA, placas miorrelajantes e impresiones 3D. Recibimos casos de todo el mundo por email."
+      content="Laboratorio dental digital CAD/CAM: coronas, puentes y férulas en zirconio, disilicato de litio y PMMA, placas miorrelajantes e impresiones 3D. Recibimos casos de todo el país por email y WhatsApp."
     />
     <meta name="theme-color" content="#b9d9eb" />
     <link rel="canonical" href="https://akpdentalab.com/" />
@@ -56,19 +56,35 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
+        "@type": ["MedicalBusiness", "LocalBusiness"],
         "name": "AKP Digital Dental Lab",
         "description": "Laboratorio dental digital CAD/CAM: coronas, puentes y férulas en zirconio, disilicato de litio y PMMA, placas miorrelajantes e impresiones 3D.",
         "url": "https://akpdentalab.com/",
+        "image": "https://akpdentalab.com/og-image.png",
         "email": "akpdentalab@gmail.com",
         "telephone": "+5491135125178",
-        "areaServed": "Worldwide",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
-          "closes": "17:00"
-        }
+        "areaServed": { "@type": "Country", "name": "Argentina" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Flores",
+          "addressRegion": "Ciudad Autónoma de Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "sameAs": ["https://www.instagram.com/akpdentalab/"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "13:00"
+          }
+        ]
       }
     </script>
   </head>

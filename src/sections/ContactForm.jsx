@@ -53,6 +53,7 @@ export function ContactForm() {
 
       <Input required {...fieldProps('subject')} />
       <Textarea required {...fieldProps('message')} />
+      <Input type="url" inputMode="url" {...fieldProps('filesLink')} />
 
       <input
         type="text"

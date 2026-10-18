@@ -19,6 +19,7 @@ const INITIAL_VALUES = {
   email: '',
   phone: '',
   subject: '',
+  filesLink: '',
   message: '',
   // Honeypot: hidden from people, bots fill it and Web3Forms drops the submission.
   botcheck: '',
