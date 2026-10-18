@@ -53,11 +53,3 @@ WeTransfer o Google Drive porque `mailto:` no admite archivos. Las URLs se recor
 ~2000 caracteres.
 
 Datos de contacto: `src/data/contact.js`.
-
-## Pendientes
-
-- Logo definitivo (hoy se usa un monograma de texto) y fotos propias.
-- Imagen Open Graph 1200×630 (`og:image`).
-- Confirmar dominio (`akpdentallab.com` se usa en canonical, sitemap y JSON-LD).
-- Confirmar horario (Lun–Vie 08:30–19:30 ART) y si el PDF de tarifas existe como link.
-- Hosting.

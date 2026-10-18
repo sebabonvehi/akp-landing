@@ -7,6 +7,13 @@ export const PHONE_DISPLAY = '+54 9 11 3512-5178';
 export const PHONE_URL = `tel:${PHONE_E164}`;
 export const WHATSAPP_URL = `https://wa.me/${PHONE_E164.replace('+', '')}`;
 
+export const WHATSAPP_FAB = {
+  label: 'Escríbanos por WhatsApp',
+  message:
+    'Hola, me comunico desde la web de AKP Digital Dental Lab. Quisiera consultar por un trabajo CAD/CAM (coronas, carillas, férulas, impresiones 3D u otro) y recibir información sobre precios y plazos de entrega.',
+};
+export const WHATSAPP_FAB_URL = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP_FAB.message)}`;
+
 export const INSTAGRAM_HANDLE = '@akpdentalab';
 export const INSTAGRAM_URL = 'https://www.instagram.com/akpdentalab/';
 

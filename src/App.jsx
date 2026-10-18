@@ -1,3 +1,4 @@
+import { WhatsAppFab } from './components/WhatsAppFab.jsx';
 import { AboutSection } from './sections/AboutSection.jsx';
 import { ContactSection } from './sections/ContactSection.jsx';
 import { FaqSection } from './sections/FaqSection.jsx';
@@ -16,6 +17,7 @@ export function App() {
         <FaqSection />
       </main>
       <SiteFooter />
+      <WhatsAppFab />
     </>
   );
 }
