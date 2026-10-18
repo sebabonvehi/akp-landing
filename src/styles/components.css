@@ -27,7 +27,7 @@
   .btn-primary,
   .btn-secondary,
   .btn-ghost {
-    @apply inline-flex h-10 items-center justify-center gap-2 rounded px-6 font-label text-label-md font-semibold whitespace-nowrap uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-70;
+    @apply inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded px-6 font-label text-label-md font-semibold whitespace-nowrap uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-70;
   }
 
   .btn-primary {
