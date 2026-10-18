@@ -5,11 +5,11 @@ export const ABOUT_HEADING = {
 export const ABOUT_PARAGRAPHS = [
   {
     id: 'mission',
-    text: 'AKP Digital Dental Lab es un laboratorio dental digital dedicado a la fabricación de restauraciones protésicas mediante flujo CAD/CAM. Trabajamos junto a odontólogos, prostodoncistas, clínicas y protesistas que buscan precisión, previsibilidad y una comunicación técnica directa.',
+    text: 'En AKP Laboratorio dental digital nos dedicamos a la fabricación de prótesis dentales con flujo CAD/CAM, utilizando materiales de uso odontológico y tecnología de última generación.',
   },
   {
     id: 'workflow',
-    text: 'Recibimos escaneos intraorales y archivos STL, PLY y OBJ desde cualquier lugar, diseñamos cada caso de forma digital y lo fabricamos con materiales de uso odontológico, cuidando el ajuste, la anatomía y la estética de cada pieza.',
+    text: 'Recibimos escaneos intraorales y archivos STL y PLY desde cualquier lugar, diseñamos cada caso de forma digital y lo fabricamos con materiales de uso odontológico, cuidando el ajuste, la anatomía y la estética de cada pieza.',
   },
   {
     id: 'approach',

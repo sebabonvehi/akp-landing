@@ -37,4 +37,4 @@ See `ARCHITECTURE.md` for layer rules and the contact-form flow.
 
 ## Pending (from README)
 
-Final logo and photos, OG image 1200×630, domain confirmation (`akpdentallab.com` used in canonical, `public/sitemap.xml` and JSON-LD in `index.html`), confirm business hours and tariffs PDF link, hosting.
+Final logo and photos, OG image 1200×630, domain confirmation (`akpdentalab.com` used in canonical, `public/sitemap.xml` and JSON-LD in `index.html`), confirm business hours and tariffs PDF link, hosting.
