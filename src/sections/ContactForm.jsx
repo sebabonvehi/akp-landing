@@ -3,22 +3,26 @@ import { Icon } from '../components/Icon.jsx';
 import { Input } from '../components/Input.jsx';
 import { Textarea } from '../components/Textarea.jsx';
 import { FORM_COPY, FORM_FIELDS } from '../data/contact.js';
-import { SEND_CHANNEL, useContactForm } from '../hooks/useContactForm.js';
+import { SEND_CHANNEL, SEND_STATUS, useContactForm } from '../hooks/useContactForm.js';
 
 const SENT_MESSAGE = {
   [SEND_CHANNEL.email]: FORM_COPY.sentEmail,
   [SEND_CHANNEL.whatsapp]: FORM_COPY.sentWhatsApp,
 };
 
-function getStatusMessage({ hasErrors, sentChannel }) {
+function getStatusMessage({ hasErrors, sentChannel, status }) {
   if (hasErrors) return FORM_COPY.invalid;
-  return sentChannel ? SENT_MESSAGE[sentChannel] : '';
+  if (status === SEND_STATUS.sending) return FORM_COPY.sendingEmail;
+  if (status === SEND_STATUS.error) return FORM_COPY.errorEmail;
+  return status === SEND_STATUS.sent ? SENT_MESSAGE[sentChannel] : '';
 }
 
 export function ContactForm() {
   const form = useContactForm();
   const { values, errors } = form;
   const statusMessage = getStatusMessage(form);
+  const isSending = form.status === SEND_STATUS.sending;
+  const isError = form.hasErrors || form.status === SEND_STATUS.error;
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -50,6 +54,17 @@ export function ContactForm() {
       <Input required {...fieldProps('subject')} />
       <Textarea required {...fieldProps('message')} />
 
+      <input
+        type="text"
+        name="botcheck"
+        value={values.botcheck}
+        onChange={form.handleChange}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
+
       <p className="body-sm flex items-start gap-2">
         <Icon name="drive_folder_upload" size="sm" className="mt-0.5 text-gold" />
         {FORM_COPY.attachments}
@@ -57,7 +72,7 @@ export function ContactForm() {
 
       <div className="form-actions">
         <div className="flex flex-col gap-2 sm:flex-row">
-          <Button type="submit" icon="mail">
+          <Button type="submit" icon="mail" disabled={isSending} aria-busy={isSending}>
             {FORM_COPY.submitEmail}
           </Button>
           <Button variant="secondary" icon="chat" onClick={() => form.send(SEND_CHANNEL.whatsapp)}>
@@ -70,7 +85,7 @@ export function ContactForm() {
         </p>
       </div>
 
-      <p aria-live="polite" className={form.hasErrors ? 'input-error' : 'form-status'}>
+      <p aria-live="polite" className={isError ? 'input-error' : 'form-status'}>
         {statusMessage}
       </p>
     </form>

@@ -2,6 +2,9 @@ export const EMAIL_GENERAL = 'akpdentalab@gmail.com';
 export const EMAIL_LAB = 'akpdentalab@gmail.com';
 export const EMAIL_CASES = 'akpdentalab@gmail.com';
 
+// Public by design: a Web3Forms key can only deliver to the inbox it was registered with.
+export const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ?? '';
+
 export const PHONE_E164 = '+5491135125178';
 export const PHONE_DISPLAY = '+54 9 11 3512-5178';
 export const PHONE_URL = `tel:${PHONE_E164}`;
@@ -104,8 +107,9 @@ export const FORM_COPY = {
   submitWhatsApp: 'Enviar por WhatsApp',
   privacy: 'Sus datos solo se usan para responder la consulta',
   attachments: `Envie los archivos STL y PLY por WeTransfer a ${EMAIL_CASES} y las imagenes por email o WhatsApp`,
-  sentEmail:
-    'Se abrió su cliente de correo con la consulta lista. Revise el mensaje y presione Enviar para completarlo.',
+  sendingEmail: 'Enviando consulta…',
+  sentEmail: 'Consulta enviada. El laboratorio le responderá a la brevedad.',
+  errorEmail: `No pudimos enviar la consulta. Intente de nuevo, use WhatsApp o escríbanos a ${EMAIL_GENERAL}.`,
   sentWhatsApp:
     'Se abrió WhatsApp con la consulta lista. Revise el mensaje y envíelo para completarlo.',
   invalid: 'Revise los campos marcados antes de enviar.',

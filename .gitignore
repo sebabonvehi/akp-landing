@@ -28,3 +28,8 @@ dist-ssr
 # Local tooling
 .claude/settings.local.json
 .codegraph/
+
+# Env files with secrets
+.env
+.env.*
+!.env.example
