@@ -53,22 +53,20 @@ export function ContactForm() {
 
       <Input required {...fieldProps('subject')} />
       <Textarea required {...fieldProps('message')} />
-      <Input type="url" inputMode="url" {...fieldProps('filesLink')} />
-
-      <input
-        type="text"
-        name="botcheck"
-        value={values.botcheck}
-        onChange={form.handleChange}
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        className="hidden"
-      />
 
       <p className="body-sm flex items-start gap-2">
         <Icon name="drive_folder_upload" size="sm" className="mt-0.5 text-gold" />
-        {FORM_COPY.attachments}
+        <span>
+          {FORM_COPY.attachments}{' '}
+          <a
+            href={FORM_COPY.attachmentsLinkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            {FORM_COPY.attachmentsLinkLabel}
+          </a>
+        </span>
       </p>
 
       <div className="form-actions">

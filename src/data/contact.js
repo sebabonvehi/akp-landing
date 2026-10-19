@@ -95,11 +95,6 @@ export const FORM_FIELDS = {
     label: 'Asunto del caso',
     placeholder: 'Ej. Coronas de zirconio en 14 y 15',
   },
-  filesLink: {
-    label: 'Link a los archivos (opcional)',
-    placeholder: 'https://wetransfer.com/… o https://drive.google.com/…',
-    icon: 'cloud_upload',
-  },
   message: {
     label: 'Mensaje',
     placeholder:
@@ -111,7 +106,9 @@ export const FORM_COPY = {
   submitEmail: 'Enviar por email',
   submitWhatsApp: 'Enviar por WhatsApp',
   privacy: 'Sus datos solo se usan para responder la consulta',
-  attachments: `Suba los archivos STL, PLY u OBJ a WeTransfer o Google Drive y pegue el link arriba, o envíelos a ${EMAIL_CASES}.`,
+  attachments: 'Suba los archivos STL o PLY a',
+  attachmentsLinkLabel: 'WeTransfer',
+  attachmentsLinkUrl: 'https://wetransfer.com/',
   sendingEmail: 'Enviando consulta…',
   sentEmail: 'Consulta enviada. El laboratorio le responderá a la brevedad.',
   errorEmail: `No pudimos enviar la consulta. Intente de nuevo, use WhatsApp o escríbanos a ${EMAIL_GENERAL}.`,
