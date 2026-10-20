@@ -5,8 +5,8 @@ export const EMAIL_CASES = 'akpdentalab@gmail.com';
 // Public by design: a Web3Forms key can only deliver to the inbox it was registered with.
 export const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ?? '';
 
-export const PHONE_E164 = '+5491135125178';
-export const PHONE_DISPLAY = '+54 9 11 3512-5178';
+export const PHONE_E164 = '+5491133428161';
+export const PHONE_DISPLAY = '+54 9 11 3342-8161';
 export const PHONE_URL = `tel:${PHONE_E164}`;
 export const WHATSAPP_URL = `https://wa.me/${PHONE_E164.replace('+', '')}`;
 
