@@ -9,7 +9,7 @@ export const ABOUT_PARAGRAPHS = [
   },
   {
     id: 'workflow',
-    text: 'Recibimos escaneos intraorales y archivos STL y PLY desde cualquier lugar, diseñamos cada caso de forma digital y lo fabricamos con materiales de uso odontológico, cuidando el ajuste, la anatomía y la estética de cada pieza.',
+    text: 'Recibimos escaneos (STL y PLY) o modelos analógicos desde cualquier lugar, diseñamos cada caso de forma digital y lo fabricamos con materiales de uso odontológico, cuidando el ajuste, la anatomía y la estética de cada pieza.',
   },
   {
     id: 'approach',

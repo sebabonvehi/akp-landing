@@ -140,6 +140,10 @@
     @apply w-auto shrink-0 rounded object-contain;
   }
 
+  .footer-heading {
+    @apply mb-4 block font-label text-label-sm uppercase;
+  }
+
   .brand-name {
     @apply font-label text-label-md text-gold uppercase;
   }
@@ -209,7 +213,7 @@
   }
 
   .faq-item {
-    @apply rounded border border-border-gold bg-pearl px-4;
+    @apply rounded border border-border-gold bg-surface-bright px-4;
   }
 
   .faq-question {

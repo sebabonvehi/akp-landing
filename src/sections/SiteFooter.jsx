@@ -1,87 +1,72 @@
 import { Icon } from '../components/Icon.jsx';
 import { InstagramIcon } from '../components/InstagramIcon.jsx';
-import { BRAND_LOGO, BRAND_NAME } from '../data/brand.js';
-import { FILE_FORMATS, FOOTER_CONTACT, FOOTER_LEGAL, FOOTER_LOCATION } from '../data/footer.js';
+import { BRAND_MARK, BRAND_MONOGRAM, BRAND_TAGLINE } from '../data/brand.js';
+import { FOOTER_CONTACT, FOOTER_HOURS, FOOTER_INSTAGRAM, FOOTER_LEGAL } from '../data/footer.js';
 import { externalLinkProps } from '../lib/externalLinkProps.js';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function SiteFooter() {
   return (
-    <footer className="bg-canvas py-10 text-on-surface-variant">
-      <div className="container-page">
-        <div className="mb-10 grid gap-8 sm:grid-cols-2 lg:mb-16 lg:grid-cols-4 lg:gap-gutter">
-          <div>
+    <footer className="bg-inverse-primary text-inverse-surface">
+      <div className="container-page grid gap-10 py-12 sm:grid-cols-3 lg:gap-gutter">
+        <div className="flex flex-col items-start gap-4">
+          <div className="flex items-center gap-3">
             <img
-              src={BRAND_LOGO}
-              alt={BRAND_NAME}
-              width={759}
+              src={BRAND_MARK}
+              alt=""
+              width={194}
               height={201}
-              className="brand-logo mb-4 h-14"
+              className="brand-logo h-12"
               loading="lazy"
             />
+            <span className="flex flex-col">
+              <span className="font-sans text-headline-sm font-semibold">{BRAND_MONOGRAM}</span>
+              <span className="font-label text-label-md uppercase">{BRAND_TAGLINE}</span>
+            </span>
           </div>
-
-          <div>
-            <h3 className="eyebrow mb-4">{FILE_FORMATS.title}</h3>
-            <p className="body-md mb-4">{FILE_FORMATS.description}</p>
-            <ul className="flex flex-col gap-1">
-              {FILE_FORMATS.items.map((item) => (
-                <li key={item} className="body-sm flex items-center gap-1.5">
-                  <Icon name="check_circle" size="sm" className="text-champagne" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="eyebrow mb-4">{FOOTER_CONTACT.title}</h3>
-            <ul className="flex flex-col gap-2">
-              {FOOTER_CONTACT.items.map((item) => (
-                <li key={item.id} className="flex items-start gap-2">
-                  {item.icon === 'instagram' ? (
-                    <InstagramIcon className="text-champagne" />
-                  ) : (
-                    <Icon name={item.icon} className="text-champagne" />
-                  )}
-                  <span>
-                    <span className="caption block text-on-surface">{item.label}</span>
-                    {item.href ? (
-                      <a
-                        href={item.href}
-                        className="body-sm hover:text-gold"
-                        {...externalLinkProps(item.href)}
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      [item.value].flat().map((line) => (
-                        <span key={line} className="body-sm block">
-                          {line}
-                        </span>
-                      ))
-                    )}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="eyebrow mb-4">{FOOTER_LOCATION.title}</h3>
-            <a
-              href={FOOTER_LOCATION.href}
-              className="body-sm flex items-center gap-2 hover:text-gold"
-              {...externalLinkProps(FOOTER_LOCATION.href)}
-            >
-              <Icon name="location_on" className="text-champagne" />
-              {FOOTER_LOCATION.value}
-            </a>
-          </div>
+          <a
+            href={FOOTER_INSTAGRAM.href}
+            aria-label={FOOTER_INSTAGRAM.label}
+            className="inline-flex hover:text-primary"
+            {...externalLinkProps(FOOTER_INSTAGRAM.href)}
+          >
+            <InstagramIcon />
+          </a>
         </div>
 
-        <p className="caption text-center md:text-left">
+        <div>
+          <h3 className="footer-heading">{FOOTER_CONTACT.title}</h3>
+          <ul className="flex flex-col gap-3">
+            {FOOTER_CONTACT.items.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={item.href}
+                  className="flex items-center gap-2 font-sans text-body-sm hover:text-primary"
+                  {...externalLinkProps(item.href)}
+                >
+                  <Icon name={item.icon} size="sm" />
+                  {item.value}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="footer-heading">{FOOTER_HOURS.title}</h3>
+          <ul className="mb-4 flex flex-col gap-1">
+            {FOOTER_HOURS.lines.map((line) => (
+              <li key={line} className="font-sans text-body-sm">
+                {line}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-outline">
+        <p className="container-page py-4 text-center font-label text-label-sm sm:text-left">
           © {CURRENT_YEAR} {FOOTER_LEGAL}
         </p>
       </div>

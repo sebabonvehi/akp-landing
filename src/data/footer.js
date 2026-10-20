@@ -6,53 +6,27 @@ import {
   LOCATION,
   LOCATION_URL,
   PHONE_DISPLAY,
-  PHONE_URL,
   SATURDAY_HOURS,
+  WHATSAPP_URL,
 } from './contact.js';
 
-export const FILE_FORMATS = {
-  title: 'Formatos y archivos',
-  description: 'Recibimos escaneos y modelos analógicos:',
-  items: ['STL', 'PLY con textura y color'],
+export const FOOTER_INSTAGRAM = {
+  label: `Instagram ${INSTAGRAM_HANDLE}`,
+  href: INSTAGRAM_URL,
 };
 
 export const FOOTER_CONTACT = {
   title: 'Contacto',
   items: [
-    {
-      id: 'phone',
-      icon: 'phone_in_talk',
-      label: 'Teléfono / WhatsApp',
-      value: PHONE_DISPLAY,
-      href: PHONE_URL,
-    },
-    {
-      id: 'hours',
-      icon: 'schedule',
-      label: 'Horario de atención',
-      value: [BUSINESS_HOURS, SATURDAY_HOURS],
-    },
-    {
-      id: 'cases',
-      icon: 'mail',
-      label: 'Casos y archivos',
-      value: EMAIL_CASES,
-      href: `mailto:${EMAIL_CASES}`,
-    },
-    {
-      id: 'instagram',
-      icon: 'instagram',
-      label: 'Instagram',
-      value: INSTAGRAM_HANDLE,
-      href: INSTAGRAM_URL,
-    },
+    { id: 'whatsapp', icon: 'chat', value: PHONE_DISPLAY, href: WHATSAPP_URL },
+    { id: 'cases', icon: 'mail', value: EMAIL_CASES, href: `mailto:${EMAIL_CASES}` },
+    { id: 'location', icon: 'location_on', value: LOCATION, href: LOCATION_URL },
   ],
 };
 
-export const FOOTER_LOCATION = {
-  title: 'Ubicación',
-  value: LOCATION,
-  href: LOCATION_URL,
+export const FOOTER_HOURS = {
+  title: 'Horario',
+  lines: [BUSINESS_HOURS, SATURDAY_HOURS],
 };
 
-export const FOOTER_LEGAL = 'AKP Laboratorio dental digital. Todos los derechos reservados.';
+export const FOOTER_LEGAL = 'AKP Laboratorio Dental Digital';
