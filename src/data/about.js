@@ -13,6 +13,6 @@ export const ABOUT_PARAGRAPHS = [
   },
   {
     id: 'approach',
-    text: 'Creemos que un buen resultado empieza antes del fresado: por eso revisamos cada caso junto al profesional, consultamos lo que haga falta y acordamos los detalles antes de avanzar.',
+    text: 'Creemos que un buen resultado empieza antes del fresado. Por eso revisamos cada caso junto al profesional, consultamos lo que haga falta y acordamos los detalles antes de avanzar.',
   },
 ];
