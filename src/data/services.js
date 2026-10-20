@@ -1,6 +1,5 @@
 export const SERVICES_HEADING = {
-  eyebrow: 'Materiales y servicios',
-  title: 'Laboratorio dental digital CAD/CAM en Buenos Aires',
+  title: 'Materiales y servicios',
   description:
     'Nuestro laboratorio dental cuenta con un sistema CAD/CAM de última generación, que nos permite ofrecer una amplia variedad de materiales y servicios para la fabricación de restauraciones dentales de alta calidad. Trabajamos con materiales cerámicos, polímeros y resinas, adaptándonos a las necesidades de cada paciente y profesional.',
 };

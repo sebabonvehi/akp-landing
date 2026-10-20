@@ -81,7 +81,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <p className="caption text-center md:text-left">
+        <p className="caption text-center md:text-left" suppressHydrationWarning>
           © {CURRENT_YEAR} {FOOTER_LEGAL}
         </p>
       </div>
