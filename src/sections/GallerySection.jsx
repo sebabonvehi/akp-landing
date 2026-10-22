@@ -27,7 +27,7 @@ export function GallerySection() {
                 aria-label={GALLERY_LABELS.previous}
                 onClick={previous}
               >
-                <Icon name="chevron_left" />
+                <Icon name="arrow_back" />
               </button>
             )}
             <ul ref={trackRef} className="carousel-track">
@@ -61,7 +61,7 @@ export function GallerySection() {
                 aria-label={GALLERY_LABELS.next}
                 onClick={next}
               >
-                <Icon name="chevron_right" />
+                <Icon name="arrow_forward" />
               </button>
             )}
           </div>
