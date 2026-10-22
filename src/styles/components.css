@@ -144,6 +144,43 @@
     @apply mb-4 block font-label text-label-sm uppercase;
   }
 
+  .carousel {
+    @apply flex w-full max-w-4xl flex-col gap-4;
+  }
+
+  .carousel-track {
+    @apply flex snap-x snap-mandatory [scrollbar-width:none] overflow-x-auto rounded-lg shadow-level-2;
+  }
+
+  .carousel-slide {
+    @apply aspect-[4/3] w-full shrink-0 snap-center;
+  }
+
+  .carousel-image {
+    @apply size-full object-cover;
+  }
+
+  .carousel-controls {
+    @apply flex items-center justify-center gap-4;
+  }
+
+  .carousel-arrow {
+    @apply flex size-10 items-center justify-center rounded-full border border-outline-variant text-on-surface transition-colors hover:bg-surface-variant;
+  }
+
+  .carousel-dot,
+  .carousel-dot-active {
+    @apply size-2.5 rounded-full transition-colors;
+  }
+
+  .carousel-dot {
+    @apply bg-outline-variant hover:bg-outline;
+  }
+
+  .carousel-dot-active {
+    @apply bg-primary-container;
+  }
+
   .brand-name {
     @apply font-label text-label-md text-gold uppercase;
   }

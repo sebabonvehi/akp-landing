@@ -1,5 +1,5 @@
 export const FOOTER_TAGLINE =
-  'Fabricación de prótesis dentales con flujo CAD/CAM.';
+  'Nuestros casos son realizados con el flujo CAD/CAM.';
 
 export const FOOTER_CONTACT = {
   title: 'Contacto',
