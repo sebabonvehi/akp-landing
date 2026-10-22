@@ -39,6 +39,12 @@
     *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
+    }
+
+    /* The carousel keeps its own short glide (see components.css). */
+    *:not(.carousel-track, .carousel-slide),
+    *::before,
+    *::after {
       transition-duration: 0.01ms !important;
     }
   }
