@@ -5,7 +5,7 @@ import { useCarousel } from '../hooks/useCarousel.js';
 
 export function GallerySection() {
   const total = GALLERY_PHOTOS.length;
-  const { trackRef, activeIndex, goTo, next, previous } = useCarousel(total);
+  const { trackRef, activeIndex, goTo, next, previous, hasPrevious, hasNext } = useCarousel(total);
 
   if (total === 0) return null;
 
@@ -26,40 +26,44 @@ export function GallerySection() {
                 className="carousel-arrow"
                 aria-label={GALLERY_LABELS.previous}
                 onClick={previous}
+                disabled={!hasPrevious}
               >
                 <Icon name="arrow_back" />
               </button>
             )}
-            <ul ref={trackRef} className="carousel-track">
-              {GALLERY_PHOTOS.map((photo, index) => (
-                <li
-                  key={photo.file}
-                  className={
-                    index === activeIndex
-                      ? 'carousel-slide carousel-slide-active'
-                      : 'carousel-slide'
-                  }
-                  aria-roledescription="diapositiva"
-                  aria-label={GALLERY_LABELS.slide(index + 1, total)}
-                  aria-hidden={index !== activeIndex}
-                >
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    loading="lazy"
-                    decoding="async"
-                    draggable={false}
-                    className="carousel-image"
-                  />
-                </li>
-              ))}
-            </ul>
+            <div ref={trackRef} className="carousel-viewport">
+              <ul className="carousel-track" style={{ '--carousel-index': activeIndex }}>
+                {GALLERY_PHOTOS.map((photo, index) => (
+                  <li
+                    key={photo.file}
+                    className={
+                      index === activeIndex
+                        ? 'carousel-slide carousel-slide-active'
+                        : 'carousel-slide'
+                    }
+                    aria-roledescription="diapositiva"
+                    aria-label={GALLERY_LABELS.slide(index + 1, total)}
+                    aria-hidden={index !== activeIndex}
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      decoding="async"
+                      draggable={false}
+                      className="carousel-image"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
             {total > 1 && (
               <button
                 type="button"
                 className="carousel-arrow"
                 aria-label={GALLERY_LABELS.next}
                 onClick={next}
+                disabled={!hasNext}
               >
                 <Icon name="arrow_forward" />
               </button>

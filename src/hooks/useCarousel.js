@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 const SWIPE_THRESHOLD = 40;
 
-// Holds the active slide of a crossfade carousel and maps horizontal swipes to prev/next.
+// Holds the active slide of a bounded (non-looping) carousel and maps horizontal swipes to prev/next.
 export function useCarousel(count) {
   const trackRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -10,13 +10,13 @@ export function useCarousel(count) {
   const goTo = useCallback(
     (index) => {
       if (count === 0) return;
-      setActiveIndex((index + count) % count);
+      setActiveIndex(Math.min(Math.max(index, 0), count - 1));
     },
     [count],
   );
 
-  const next = useCallback(() => setActiveIndex((i) => (i + 1) % count), [count]);
-  const previous = useCallback(() => setActiveIndex((i) => (i - 1 + count) % count), [count]);
+  const next = useCallback(() => setActiveIndex((i) => Math.min(i + 1, count - 1)), [count]);
+  const previous = useCallback(() => setActiveIndex((i) => Math.max(i - 1, 0)), []);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -44,5 +44,8 @@ export function useCarousel(count) {
     };
   }, [next, previous]);
 
-  return { trackRef, activeIndex, goTo, next, previous };
+  const hasPrevious = activeIndex > 0;
+  const hasNext = activeIndex < count - 1;
+
+  return { trackRef, activeIndex, goTo, next, previous, hasPrevious, hasNext };
 }

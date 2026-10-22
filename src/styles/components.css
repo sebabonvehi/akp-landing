@@ -144,28 +144,40 @@
     @apply mb-4 block font-label text-label-sm uppercase;
   }
 
+  /* Peek carousel: the active slide is centred and its neighbours show at the edges. */
   .carousel {
-    @apply flex w-full max-w-3xl flex-col gap-4;
+    --carousel-slide: 78%;
+    --carousel-gap: 0.75rem;
+    @apply flex w-full max-w-5xl flex-col gap-4 sm:[--carousel-gap:1.5rem] sm:[--carousel-slide:62%];
+  }
+
+  .carousel-viewport {
+    @apply min-w-0 flex-1 touch-pan-y overflow-hidden py-4 select-none;
   }
 
   .carousel-track {
-    @apply grid aspect-[4/3] min-w-0 flex-1 touch-pan-y overflow-hidden rounded-lg shadow-level-2 select-none;
+    display: flex;
+    gap: var(--carousel-gap);
+    transform: translateX(
+      calc(
+        (100% - var(--carousel-slide)) / 2 - var(--carousel-index) *
+          (var(--carousel-slide) + var(--carousel-gap))
+      )
+    );
+    @apply transition-transform duration-500 ease-out motion-reduce:transition-none;
   }
 
   .carousel-slide {
-    @apply col-start-1 row-start-1 overflow-hidden opacity-0 transition-opacity duration-1000 ease-in-out motion-reduce:transition-none;
+    flex: 0 0 var(--carousel-slide);
+    @apply aspect-[4/3] scale-90 overflow-hidden rounded-lg opacity-50 transition-all duration-500 ease-out motion-reduce:transition-none;
   }
 
   .carousel-slide-active {
-    @apply opacity-100;
+    @apply scale-100 opacity-100 shadow-level-2;
   }
 
   .carousel-image {
-    @apply size-full scale-105 object-cover transition-transform duration-[6000ms] ease-out motion-reduce:transition-none;
-  }
-
-  .carousel-slide-active .carousel-image {
-    @apply scale-100;
+    @apply pointer-events-none size-full object-cover;
   }
 
   .carousel-stage {
@@ -177,7 +189,7 @@
   }
 
   .carousel-arrow {
-    @apply flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-level-2 transition-all duration-200 ease-out hover:scale-105 hover:bg-primary-container hover:text-on-primary active:scale-95 motion-reduce:transition-none motion-reduce:hover:scale-100;
+    @apply flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-level-2 transition-all duration-200 ease-out enabled:hover:scale-105 enabled:hover:bg-primary-container enabled:hover:text-on-primary enabled:active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none motion-reduce:transition-none motion-reduce:hover:scale-100;
   }
 
   .carousel-dot,
