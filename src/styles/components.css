@@ -144,6 +144,90 @@
     @apply mb-4 block font-label text-label-sm uppercase;
   }
 
+  /* Peek carousel: the active slide is centred and its neighbours show at the edges. */
+  .carousel {
+    --carousel-slide: 78%;
+    --carousel-gap: 0.75rem;
+    /* Expressive ease-out: quick start, long soft settle. */
+    --carousel-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --carousel-duration: 700ms;
+    @apply flex w-full max-w-5xl flex-col gap-4 sm:[--carousel-gap:1.5rem] sm:[--carousel-slide:62%];
+  }
+
+  .carousel-viewport {
+    @apply min-w-0 flex-1 touch-pan-y overflow-hidden py-4 select-none;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: var(--carousel-gap);
+    transform: translate3d(
+      calc(
+        (100% - var(--carousel-slide)) / 2 - var(--carousel-index) *
+          (var(--carousel-slide) + var(--carousel-gap)) + var(--carousel-drag, 0px)
+      ),
+      0,
+      0
+    );
+    transition: transform var(--carousel-duration) var(--carousel-ease);
+    will-change: transform;
+    @apply cursor-grab;
+  }
+
+  .carousel-track-dragging {
+    @apply cursor-grabbing transition-none;
+  }
+
+  /* Reduced motion: keep a short, subtle glide instead of an abrupt jump. */
+  @media (prefers-reduced-motion: reduce) {
+    .carousel {
+      --carousel-duration: 250ms;
+      --carousel-ease: ease-out;
+    }
+  }
+
+  .carousel-slide {
+    flex: 0 0 var(--carousel-slide);
+    @apply aspect-[4/3] scale-90 overflow-hidden rounded-lg opacity-50;
+    transition:
+      transform var(--carousel-duration) var(--carousel-ease),
+      opacity var(--carousel-duration) var(--carousel-ease),
+      box-shadow var(--carousel-duration) var(--carousel-ease);
+  }
+
+  .carousel-slide-active {
+    @apply scale-100 opacity-100 shadow-level-2;
+  }
+
+  .carousel-image {
+    @apply pointer-events-none size-full object-cover;
+  }
+
+  .carousel-stage {
+    @apply flex items-center gap-2 sm:gap-4;
+  }
+
+  .carousel-dots {
+    @apply flex items-center justify-center gap-2;
+  }
+
+  .carousel-arrow {
+    @apply flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-level-2 transition-all duration-200 ease-out enabled:hover:scale-105 enabled:hover:bg-primary-container enabled:hover:text-on-primary enabled:active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none motion-reduce:transition-none motion-reduce:hover:scale-100;
+  }
+
+  .carousel-dot,
+  .carousel-dot-active {
+    @apply h-2 rounded-full transition-all duration-300 ease-out motion-reduce:transition-none;
+  }
+
+  .carousel-dot {
+    @apply w-2 bg-primary-container opacity-30 hover:opacity-60;
+  }
+
+  .carousel-dot-active {
+    @apply w-6 bg-primary-container;
+  }
+
   .brand-name {
     @apply font-label text-label-md text-gold uppercase;
   }
