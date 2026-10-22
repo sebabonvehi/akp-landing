@@ -13,7 +13,7 @@ export const WHATSAPP_URL = `https://wa.me/${PHONE_E164.replace('+', '')}`;
 export const WHATSAPP_FAB = {
   label: 'Escríbanos por WhatsApp',
   message:
-    'Hola, me comunico desde la web de AKP Digital Dental Lab. Quisiera consultar por un trabajo CAD/CAM (coronas, carillas, férulas, impresiones 3D u otro) y recibir información sobre precios y plazos de entrega.',
+    'Hola, me comunico desde la web de AKP Laboratorio Dental Digital. Quisiera consultar por un trabajo CAD/CAM (coronas, carillas, férulas, impresiones 3D u otro) y recibir información sobre precios y plazos de entrega.',
 };
 export const WHATSAPP_FAB_URL = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP_FAB.message)}`;
 

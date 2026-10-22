@@ -1,6 +1,6 @@
 import { Icon } from '../components/Icon.jsx';
 import { InstagramIcon } from '../components/InstagramIcon.jsx';
-import { BRAND_MARK, BRAND_MONOGRAM, BRAND_TAGLINE } from '../data/brand.js';
+import { BRAND_MARK_WHITE } from '../data/brand.js';
 import { FOOTER_CONTACT, FOOTER_HOURS, FOOTER_INSTAGRAM, FOOTER_LEGAL } from '../data/footer.js';
 import { externalLinkProps } from '../lib/externalLinkProps.js';
 
@@ -13,25 +13,19 @@ export function SiteFooter() {
         <div className="flex flex-col items-start gap-4">
           <div className="flex items-center gap-3">
             <img
-              src={BRAND_MARK}
+              src={BRAND_MARK_WHITE}
               alt=""
               width={194}
               height={201}
               className="brand-logo h-12"
               loading="lazy"
             />
-            <span className="flex flex-col">
-              <span className="font-sans text-headline-sm font-semibold">{BRAND_MONOGRAM}</span>
-              <span className="font-label text-label-md uppercase">{BRAND_TAGLINE}</span>
-            </span>
           </div>
-          <a
-            href={FOOTER_INSTAGRAM.href}
-            aria-label={FOOTER_INSTAGRAM.label}
-            className="inline-flex hover:text-primary"
-            {...externalLinkProps(FOOTER_INSTAGRAM.href)}
-          >
+          <a href={FOOTER_INSTAGRAM.href}
+            className="inline-flex items-center gap-2 font-sans text-body-sm hover:text-primary"
+            {...externalLinkProps(FOOTER_INSTAGRAM.href)}>
             <InstagramIcon />
+            <span>@akpdentalab</span>
           </a>
         </div>
 
