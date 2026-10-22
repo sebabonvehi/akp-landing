@@ -1,58 +1,42 @@
-import {
-  BUSINESS_HOURS,
-  EMAIL_CASES,
-  INSTAGRAM_HANDLE,
-  INSTAGRAM_URL,
-  LOCATION,
-  LOCATION_URL,
-  PHONE_DISPLAY,
-  PHONE_URL,
-  SATURDAY_HOURS,
-} from './contact.js';
-
-export const FILE_FORMATS = {
-  title: 'Formatos y archivos',
-  description: 'Recibimos escaneos y modelos analógicos:',
-  items: ['STL', 'PLY con textura y color'],
-};
+export const FOOTER_TAGLINE =
+  'Fabricación de prótesis dentales con flujo CAD/CAM.';
 
 export const FOOTER_CONTACT = {
   title: 'Contacto',
   items: [
     {
-      id: 'phone',
-      icon: 'phone_in_talk',
-      label: 'Teléfono / WhatsApp',
-      value: PHONE_DISPLAY,
-      href: PHONE_URL,
+      id: 'whatsapp',
+      icon: 'chat',
+      value: '+54 9 11 3342-8161',
+      href: 'https://wa.me/5491133428161',
+      label: 'Escribinos por WhatsApp al +54 9 11 3342-8161',
     },
     {
-      id: 'hours',
-      icon: 'schedule',
-      label: 'Horario de atención',
-      value: [BUSINESS_HOURS, SATURDAY_HOURS],
-    },
-    {
-      id: 'cases',
+      id: 'email',
       icon: 'mail',
-      label: 'Casos y archivos',
-      value: EMAIL_CASES,
-      href: `mailto:${EMAIL_CASES}`,
+      value: 'akpdentalab@gmail.com',
+      href: 'mailto:akpdentalab@gmail.com',
+      label: 'Enviar un email a akpdentalab@gmail.com',
     },
     {
-      id: 'instagram',
-      icon: 'instagram',
-      label: 'Instagram',
-      value: INSTAGRAM_HANDLE,
-      href: INSTAGRAM_URL,
+      id: 'location',
+      icon: 'location_on',
+      value: 'Flores, CABA',
+      href: 'https://maps.google.com/?q=Flores,+CABA',
+      label: 'Ver ubicación en Google Maps',
     },
   ],
 };
 
-export const FOOTER_LOCATION = {
-  title: 'Ubicación',
-  value: LOCATION,
-  href: LOCATION_URL,
+export const FOOTER_INSTAGRAM = {
+  href: 'https://www.instagram.com/akpdentalab/',
+  handle: '@akpdentalab',
+  label: 'Instagram de AKP (@akpdentalab)',
 };
 
-export const FOOTER_LEGAL = 'AKP Laboratorio dental digital. Todos los derechos reservados.';
+export const FOOTER_HOURS = {
+  title: 'Horario',
+  lines: ['Lun a Vie · 08:00–17:00 (ARG)', 'Sáb · 08:00–13:00 (ARG)'],
+};
+
+export const FOOTER_LEGAL = 'AKP Laboratorio Dental Digital';
