@@ -1,45 +1,48 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-// Tracks the visible slide of a horizontal scroll-snap track and scrolls to a given slide.
+const SWIPE_THRESHOLD = 40;
+
+// Holds the active slide of a crossfade carousel and maps horizontal swipes to prev/next.
 export function useCarousel(count) {
   const trackRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const goTo = useCallback(
+    (index) => {
+      if (count === 0) return;
+      setActiveIndex((index + count) % count);
+    },
+    [count],
+  );
+
+  const next = useCallback(() => setActiveIndex((i) => (i + 1) % count), [count]);
+  const previous = useCallback(() => setActiveIndex((i) => (i - 1 + count) % count), [count]);
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return undefined;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveIndex(Number(entry.target.dataset.index));
-        });
-      },
-      { root: track, threshold: 0.6 },
-    );
-    Array.from(track.children).forEach((slide) => observer.observe(slide));
-    return () => observer.disconnect();
-  }, [count]);
+    let startX = null;
+    const handleStart = (event) => {
+      startX = event.clientX;
+    };
+    const handleEnd = (event) => {
+      if (startX === null) return;
+      const delta = event.clientX - startX;
+      startX = null;
+      if (delta <= -SWIPE_THRESHOLD) next();
+      else if (delta >= SWIPE_THRESHOLD) previous();
+    };
 
-  const goTo = useCallback(
-    (index) => {
-      const track = trackRef.current;
-      if (!track || count === 0) return;
-      const target = (index + count) % count;
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      track.scrollTo({
-        left: track.children[target].offsetLeft - track.offsetLeft,
-        behavior: reduceMotion ? 'auto' : 'smooth',
-      });
-    },
-    [count],
-  );
+    track.addEventListener('pointerdown', handleStart);
+    track.addEventListener('pointerup', handleEnd);
+    track.addEventListener('pointercancel', handleEnd);
+    return () => {
+      track.removeEventListener('pointerdown', handleStart);
+      track.removeEventListener('pointerup', handleEnd);
+      track.removeEventListener('pointercancel', handleEnd);
+    };
+  }, [next, previous]);
 
-  return {
-    trackRef,
-    activeIndex,
-    goTo,
-    next: () => goTo(activeIndex + 1),
-    previous: () => goTo(activeIndex - 1),
-  };
+  return { trackRef, activeIndex, goTo, next, previous };
 }

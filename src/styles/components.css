@@ -145,40 +145,52 @@
   }
 
   .carousel {
-    @apply flex w-full max-w-4xl flex-col gap-4;
+    @apply flex w-full max-w-3xl flex-col gap-4;
   }
 
   .carousel-track {
-    @apply flex snap-x snap-mandatory [scrollbar-width:none] overflow-x-auto rounded-lg shadow-level-2;
+    @apply grid aspect-[4/3] min-w-0 flex-1 touch-pan-y overflow-hidden rounded-lg shadow-level-2 select-none;
   }
 
   .carousel-slide {
-    @apply aspect-[4/3] w-full shrink-0 snap-center;
+    @apply col-start-1 row-start-1 overflow-hidden opacity-0 transition-opacity duration-1000 ease-in-out motion-reduce:transition-none;
+  }
+
+  .carousel-slide-active {
+    @apply opacity-100;
   }
 
   .carousel-image {
-    @apply size-full object-cover;
+    @apply size-full scale-105 object-cover transition-transform duration-[6000ms] ease-out motion-reduce:transition-none;
   }
 
-  .carousel-controls {
-    @apply flex items-center justify-center gap-4;
+  .carousel-slide-active .carousel-image {
+    @apply scale-100;
+  }
+
+  .carousel-stage {
+    @apply flex items-center gap-2 sm:gap-4;
+  }
+
+  .carousel-dots {
+    @apply flex items-center justify-center gap-2;
   }
 
   .carousel-arrow {
-    @apply flex size-10 items-center justify-center rounded-full border border-outline-variant text-on-surface transition-colors hover:bg-surface-variant;
+    @apply flex size-10 shrink-0 items-center justify-center rounded-full border border-outline-variant text-on-surface transition-colors hover:bg-surface-variant;
   }
 
   .carousel-dot,
   .carousel-dot-active {
-    @apply size-2.5 rounded-full transition-colors;
+    @apply h-2 rounded-full transition-all duration-300 ease-out motion-reduce:transition-none;
   }
 
   .carousel-dot {
-    @apply bg-outline-variant hover:bg-outline;
+    @apply w-2 bg-primary-container opacity-30 hover:opacity-60;
   }
 
   .carousel-dot-active {
-    @apply bg-primary-container;
+    @apply w-6 bg-primary-container;
   }
 
   .brand-name {

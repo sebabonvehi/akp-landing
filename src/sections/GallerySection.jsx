@@ -10,7 +10,7 @@ export function GallerySection() {
   if (total === 0) return null;
 
   return (
-    <section id="galeria" aria-labelledby="gallery-title" className="section bg-surface">
+    <section id="casos" aria-labelledby="gallery-title" className="section bg-surface">
       <div className="container-page flex flex-col items-center gap-8">
         <SectionHeading id="gallery-title" align="center" {...GALLERY_HEADING} />
 
@@ -19,28 +19,8 @@ export function GallerySection() {
           aria-roledescription="carrusel"
           aria-label={GALLERY_LABELS.region}
         >
-          <ul ref={trackRef} className="carousel-track">
-            {GALLERY_PHOTOS.map((photo, index) => (
-              <li
-                key={photo.file}
-                data-index={index}
-                className="carousel-slide"
-                aria-roledescription="diapositiva"
-                aria-label={GALLERY_LABELS.slide(index + 1, total)}
-              >
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="carousel-image"
-                />
-              </li>
-            ))}
-          </ul>
-
-          {total > 1 && (
-            <div className="carousel-controls">
+          <div className="carousel-stage">
+            {total > 1 && (
               <button
                 type="button"
                 className="carousel-arrow"
@@ -49,20 +29,32 @@ export function GallerySection() {
               >
                 <Icon name="chevron_left" />
               </button>
-
-              <div className="flex items-center gap-2">
-                {GALLERY_PHOTOS.map((photo, index) => (
-                  <button
-                    key={photo.file}
-                    type="button"
-                    className={index === activeIndex ? 'carousel-dot-active' : 'carousel-dot'}
-                    aria-label={GALLERY_LABELS.goTo(index + 1, total)}
-                    aria-current={index === activeIndex ? 'true' : undefined}
-                    onClick={() => goTo(index)}
+            )}
+            <ul ref={trackRef} className="carousel-track">
+              {GALLERY_PHOTOS.map((photo, index) => (
+                <li
+                  key={photo.file}
+                  className={
+                    index === activeIndex
+                      ? 'carousel-slide carousel-slide-active'
+                      : 'carousel-slide'
+                  }
+                  aria-roledescription="diapositiva"
+                  aria-label={GALLERY_LABELS.slide(index + 1, total)}
+                  aria-hidden={index !== activeIndex}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    decoding="async"
+                    draggable={false}
+                    className="carousel-image"
                   />
-                ))}
-              </div>
-
+                </li>
+              ))}
+            </ul>
+            {total > 1 && (
               <button
                 type="button"
                 className="carousel-arrow"
@@ -71,6 +63,21 @@ export function GallerySection() {
               >
                 <Icon name="chevron_right" />
               </button>
+            )}
+          </div>
+
+          {total > 1 && (
+            <div className="carousel-dots">
+              {GALLERY_PHOTOS.map((photo, index) => (
+                <button
+                  key={photo.file}
+                  type="button"
+                  className={index === activeIndex ? 'carousel-dot-active' : 'carousel-dot'}
+                  aria-label={GALLERY_LABELS.goTo(index + 1, total)}
+                  aria-current={index === activeIndex ? 'true' : undefined}
+                  onClick={() => goTo(index)}
+                />
+              ))}
             </div>
           )}
         </div>
