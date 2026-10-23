@@ -28,7 +28,7 @@ export function GallerySection() {
                 onClick={previous}
                 disabled={!hasPrevious}
               >
-                <Icon name="arrow_back" />
+                <Icon name="chevron_left" />
               </button>
             )}
             <div ref={trackRef} className="carousel-viewport">
@@ -65,7 +65,7 @@ export function GallerySection() {
                 onClick={next}
                 disabled={!hasNext}
               >
-                <Icon name="arrow_forward" />
+                <Icon name="chevron_right" />
               </button>
             )}
           </div>
