@@ -146,8 +146,9 @@
 
   /* Peek carousel: the active slide is centred and its neighbours show at the edges. */
   .carousel {
-    --carousel-slide: 78%;
-    --carousel-gap: 0.75rem;
+    /* Mobile: one full-width slide with overlaid arrows; peek layout from sm up. */
+    --carousel-slide: 100%;
+    --carousel-gap: 1rem;
     /* Expressive ease-out: quick start, long soft settle. */
     --carousel-ease: cubic-bezier(0.22, 1, 0.36, 1);
     --carousel-duration: 700ms;
@@ -204,7 +205,7 @@
   }
 
   .carousel-stage {
-    @apply flex items-center gap-2 sm:gap-4;
+    @apply relative flex items-center sm:gap-4;
   }
 
   .carousel-dots {
@@ -212,7 +213,7 @@
   }
 
   .carousel-arrow {
-    @apply flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-level-2 transition-all duration-200 ease-out enabled:hover:scale-105 enabled:hover:bg-primary-container enabled:hover:text-on-primary enabled:active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none motion-reduce:transition-none motion-reduce:hover:scale-100;
+    @apply absolute top-1/2 z-10 -translate-y-1/2 first:left-2 last:right-2 sm:static sm:translate-y-0 flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-level-2 transition-all duration-200 ease-out enabled:hover:scale-105 enabled:hover:bg-primary-container enabled:hover:text-on-primary enabled:active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none motion-reduce:transition-none motion-reduce:hover:scale-100;
   }
 
   .carousel-dot,
