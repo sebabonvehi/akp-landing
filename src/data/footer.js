@@ -6,9 +6,9 @@ export const FOOTER_CONTACT = {
     {
       id: 'whatsapp',
       icon: 'chat',
-      value: '+54 9 11 3342-8161',
-      href: 'https://wa.me/5491133428161',
-      label: 'Escribinos por WhatsApp al +54 9 11 3342-8161',
+      value: '+54 9 11 8123-0123',
+      href: 'https://wa.me/5491181230123',
+      label: 'Escribinos por WhatsApp al +54 9 11 8123-0123',
     },
     {
       id: 'email',
