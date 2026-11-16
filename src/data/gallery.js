@@ -22,6 +22,8 @@ const GALLERY_ITEMS = [
   { file: 'case-2.jpg' },
   { file: 'case-3.jpg' },
   { file: 'case-4.jpg' },
+  { file: 'case-5.jpg' },
+  { file: 'case-6.jpg' },
 ];
 
 export const GALLERY_PHOTOS = GALLERY_ITEMS.map((item) => ({
